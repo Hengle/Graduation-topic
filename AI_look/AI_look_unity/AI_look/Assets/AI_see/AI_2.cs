@@ -88,7 +88,12 @@ public class AI_2 : MonoBehaviour {
     bool canSee(Collider c)
     {
         //畫一射線過去，是否被擋住
-        Ray DetectRay = new Ray(transform.position, c.gameObject.transform.position.normalized * maxVisionDistance);
+        //Ray DetectRay = new Ray(transform.position, c.gameObject.transform.position.normalized * maxVisionDistance);
+        //畫一射線過去，是否被擋住
+        //(c.gameObject.transform.position - transform.position).normalized 指與目標物之間向量，在Ray裡為方向
+        Vector3 tVec = (c.gameObject.transform.position - transform.position).normalized;
+        Ray DetectRay = new Ray(transform.position, tVec);
+
         //射線上色
         Debug.DrawRay(transform.position, c.gameObject.transform.position.normalized * maxVisionDistance);
         RaycastHit hitInfo;
