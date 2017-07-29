@@ -28,6 +28,27 @@ public class Example_Hand : MonoBehaviour
         //#endif
     }
 
+    //    Unity 触屏操作
+    //当将Unity游戏运行到IOS或Android设备上时，桌面系统的鼠标左键可以自动变为手机屏幕上的触屏操作，但如多点触屏等操作却是无法利用鼠标操作进行的。Unity的Input类中不仅包含桌面系统的各种输入功能，也包含了针对移动设备触屏操作的各种功能，下面介绍一下Input类在触碰操作上的使用。
+    //首先介绍一下Input.touches结构，这是一个触摸数组，每个记录代表着手指在屏幕上的触碰状态。每个手指触控都是通过Input.touches来描述的：
+  
+    //fingerId，触摸的唯一索引
+    //position，触摸屏幕的位置
+    //deltatime，从最后状态到目前状态所经过的时间
+    //tapCount，点击数。Andorid设备不对点击计数，这个方法总是返回1
+    //deltaPosition，自最后一帧所改变的屏幕位置
+    //phase，相位，也即屏幕操作状态
+
+    //其中phase（状态）有以下这几种：
+    //Began，手指刚刚触摸屏幕
+    //Moved，手指在屏幕上移动
+    //Stationary，手指触摸屏幕，但自最后一阵没有移动
+    //Ended，手指离开屏幕
+    //Canceled，系统取消触控跟踪，原因如把设备放在脸上或同时超过5个触摸点
+
+
+
+
     void MouseInput()
     {
         if (Input.GetMouseButtonDown(0))
@@ -66,7 +87,7 @@ public class Example_Hand : MonoBehaviour
             {
                 Debug.Log("Moved");
                 //移動攝影機
-                //Camera.main.transform.Translate (new Vector3 (-Input.touches [0].deltaPosition.x * Time.deltaTime, -Input.touches [0].deltaPosition.y * Time.deltaTime, 0));
+                Camera.main.transform.Translate(new Vector3(-Input.touches[0].deltaPosition.x * Time.deltaTime, -Input.touches[0].deltaPosition.y * Time.deltaTime, 0));
             }
 
 
@@ -96,6 +117,7 @@ public class Example_Hand : MonoBehaviour
             for (int i = 0; i < 2; i++)
             {
                 UnityEngine.Touch touch = UnityEngine.Input.touches[i];
+                //Input.touches 触摸列表 static var touches : Touch[]
 
                 if (touch.phase == TouchPhase.Ended)
                     break;
