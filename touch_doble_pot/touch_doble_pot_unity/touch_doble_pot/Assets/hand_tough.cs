@@ -327,4 +327,9 @@ public class hand_tough : MonoBehaviour
 
     }
 
+    public void button()
+    {
+        reduction = true;
+    }
+
 }
