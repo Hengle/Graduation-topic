@@ -5,12 +5,16 @@ using UnityEngine.UI;
 
 public class toggle_prop : MonoBehaviour {
 
+    [Header("表示UI中物件的控制腳本")]
+
     public hand_all hand_all;
 
     public camera_z_ray camera_z_ray;
 
     public prop_vec3_manger prop_vec3_manger;
 
+    //該UI上所表示的物件
+    [Header("該UI上所表示的物件")]
     public GameObject prop_gameobject;
 
     //public bool is_chack = false;
@@ -85,6 +89,10 @@ public class toggle_prop : MonoBehaviour {
         //is_chack = false;
 
         prop_vec3_manger.prop_gameobject = null;
+
+        prop_vec3_manger.prop_mode = "";
+
+        prop_vec3_manger.prop_mode_time =0;
 
         this.transform.GetChild(0).GetComponent<Image>().color = new Color32(255, 255, 255, 255);
 

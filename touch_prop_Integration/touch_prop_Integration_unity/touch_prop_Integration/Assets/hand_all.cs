@@ -151,6 +151,7 @@ public class hand_all : MonoBehaviour
             }
             else if ((Input.touches[0].phase == TouchPhase.Stationary) && (first_chack == true))//觸碰不移動
             {
+                //觸碰不移動來段地要移動point還是攝影機
                 print("一根停留");
                 time_move_point();
             }
@@ -166,6 +167,7 @@ public class hand_all : MonoBehaviour
 
                 if (move_point == true)
                 {
+                    //移動point
                     point.transform.Translate(
                         new Vector3(
                             -one_finger_displacement.x * move_speed * Time.deltaTime,
@@ -182,8 +184,10 @@ public class hand_all : MonoBehaviour
                     //        0,
                     //    Space.World);
 
+                    //移動攝影機角度
                     if (Mathf.Abs(one_finger_displacement.x) > Mathf.Abs(one_finger_displacement.y))
                     {
+                        //當X軸大於Y軸時，以Y為軸心旋轉
                         //point.transform.Rotate(0, one_finger_displacement.x * rotate_speed * Time.deltaTime, 0, Space.World);
                         point.transform.rotation = Quaternion.Euler(
                             point.transform.rotation.eulerAngles.x,
@@ -192,12 +196,36 @@ public class hand_all : MonoBehaviour
                     }
                     else if (Mathf.Abs(one_finger_displacement.x) < Mathf.Abs(one_finger_displacement.y))
                     {
+                        //當Y軸大於X軸時，以X為軸心旋轉
                         //point.transform.Rotate(one_finger_displacement.y * rotate_speed * Time.deltaTime, 0, 0, Space.World);
+
+                        //因X軸會卡在90度，所以必須先運算過在呈現，180是因unity 負角度 會變成 正角度 -10 = 350 
+                        //所以180只是居分是在正還是負 0~180 就是在正區域 180~ 360 為負
+                        if (point.transform.rotation.eulerAngles.x < 180)
+                        {
+                            //當X軸卡到90度時停止旋轉
+                            if (point.transform.rotation.eulerAngles.x + one_finger_displacement.y * rotate_speed * Time.deltaTime > 90)
+                            {
+                                return;
+                            }
+                        }
+                        else if (point.transform.rotation.eulerAngles.x > 180)
+                        {
+                            //當X軸卡到-90度時停止旋轉
+                            //減360 是因 -10度 時 在unity裡表示350度 需減掉才能運算
+                            if ((point.transform.rotation.eulerAngles.x - 360f) + one_finger_displacement.y * rotate_speed * Time.deltaTime < -90)
+                            {
+                                return;
+                            }
+                        }
+
+
                         point.transform.rotation = Quaternion.Euler(
                             point.transform.rotation.eulerAngles.x + one_finger_displacement.y * rotate_speed * Time.deltaTime,
                             point.transform.rotation.eulerAngles.y,
                             0);
                     }
+
 
 
                 }

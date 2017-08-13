@@ -38,7 +38,15 @@ public class camera_z_ray : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-        camera_z_ray_function();
+        if(Input.touchCount == 0)
+        {
+            return;
+        }
+        else
+        {
+            camera_z_ray_function();
+        }
+        
     }
 
     /// <summary>
