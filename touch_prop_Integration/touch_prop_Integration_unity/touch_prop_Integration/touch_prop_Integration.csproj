@@ -84,6 +84,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\button_prop.cs" />
     <Compile Include="Assets\camera_z_ray.cs" />
     <Compile Include="Assets\hand_all.cs" />
     <Compile Include="Assets\hand_tough.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="Assets\prop_vec3_manger.cs" />
     <Compile Include="Assets\test_Z_2.cs" />
     <Compile Include="Assets\test_prop.cs" />
+    <Compile Include="Assets\toggle_prop.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

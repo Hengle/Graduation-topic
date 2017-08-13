@@ -25,10 +25,15 @@ public class camera_z_ray : MonoBehaviour {
         }
     }
 
+    private void Awake()
+    {
+        camera_ray = (Camera)FindObjectOfType(typeof(Camera));
+    }
+
     // Use this for initialization
     void Start () {
-		
-	}
+      
+    }
 	
 	// Update is called once per frame
 	void Update ()

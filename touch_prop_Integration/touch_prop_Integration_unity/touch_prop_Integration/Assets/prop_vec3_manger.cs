@@ -7,7 +7,7 @@ public class prop_vec3_manger : MonoBehaviour
 
     //camera_z_ray腳本
     [Header("camera_z_ray腳本")]
-    public camera_z_ray camera_z;
+    public camera_z_ray camera_z_ray;
 
     //camera_z_ray腳本點擊位置
     [Header("camera_z_ray腳本點擊位置")]
@@ -17,10 +17,15 @@ public class prop_vec3_manger : MonoBehaviour
     [Header("傳輸過來的道具")]
     public GameObject prop_gameobject;
 
+    private void Awake()
+    {
+        camera_z_ray = (camera_z_ray)FindObjectOfType(typeof(camera_z_ray));
+    }
+
     // Use this for initialization
     void Start()
     {
-
+      
     }
 
     // Update is called once per frame
