@@ -88,6 +88,7 @@
     <Compile Include="Assets\camera_z_ray.cs" />
     <Compile Include="Assets\hand_all.cs" />
     <Compile Include="Assets\hand_tough.cs" />
+    <Compile Include="Assets\prop_delay.cs" />
     <Compile Include="Assets\prop_id.cs" />
     <Compile Include="Assets\prop_vec3_manger.cs" />
     <Compile Include="Assets\test_Z_2.cs" />

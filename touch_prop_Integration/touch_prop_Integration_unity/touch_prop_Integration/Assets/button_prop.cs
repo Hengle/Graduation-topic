@@ -55,7 +55,7 @@ public class button_prop : MonoBehaviour {
         camera_z_ray.enabled = true;
         prop_vec3_manger.enabled = true;
 
-        prop_vec3_manger.prop_gameobject_send(prop_gameobject);
+        prop_vec3_manger.prop_gameobject_send(prop_gameobject,this.gameObject);
 
         this.GetComponent<Image>().color = new Color32(125, 125, 125, 255);
         is_chack = true;

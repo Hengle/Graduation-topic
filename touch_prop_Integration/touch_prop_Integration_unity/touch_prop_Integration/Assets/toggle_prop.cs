@@ -53,6 +53,7 @@ public class toggle_prop : MonoBehaviour {
         //    prop_off();
         //}
 
+        //當按下時輸出數據到放置道具腳本，並改變按鈕
         if (this.GetComponent<Toggle>().isOn == true)
         {
             prop_on();
@@ -70,7 +71,7 @@ public class toggle_prop : MonoBehaviour {
         camera_z_ray.enabled = true;
         prop_vec3_manger.enabled = true;
 
-        prop_vec3_manger.prop_gameobject_send(prop_gameobject);
+        prop_vec3_manger.prop_gameobject_send(prop_gameobject , this.gameObject);
 
         //this.GetComponent<Image>().color = new Color32(125, 125, 125, 255);
         //is_chack = true;
