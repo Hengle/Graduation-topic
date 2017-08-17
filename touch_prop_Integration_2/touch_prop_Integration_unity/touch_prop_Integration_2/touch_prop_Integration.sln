@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "touch_prop_Integration", "touch_prop_Integration.csproj", "{AA3A8F64-49B9-7161-E55E-7008ADD54D4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA3A8F64-49B9-7161-E55E-7008ADD54D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3A8F64-49B9-7161-E55E-7008ADD54D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA3A8F64-49B9-7161-E55E-7008ADD54D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA3A8F64-49B9-7161-E55E-7008ADD54D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
