@@ -79,7 +79,7 @@ public class AI_look : MonoBehaviour
     void collider_serch()
     {
         //範圍內所有物件
-        serch_colloder_find = Physics.OverlapSphere(this.transform.position, max_eye_distance, 1 << LayerMask.NameToLayer("wall"));
+        serch_colloder_find = Physics.OverlapSphere(this.transform.position, max_eye_distance/*, 1 << LayerMask.NameToLayer("wall")*/);
         //LayerMask mask = 1 << 2; 表示开启Layer2。
         //LayerMask mask = 0 << 5;表示关闭Layer5。
         //LayerMask mask = 1<<2|1<<8;表示开启Layer2和Layer8。
@@ -91,7 +91,7 @@ public class AI_look : MonoBehaviour
             if (see_distance(serch_colloder) == true)
             {
                 print("I see a target");
-                AI_manger.instance.see_wall = true;
+                //AI_manger.instance.see_wall = true;
                 //在这里执行你想要进行的操作，比如设定寻路目标之类的
             }
             //else if (see_distance(serch_colloder) == false)
