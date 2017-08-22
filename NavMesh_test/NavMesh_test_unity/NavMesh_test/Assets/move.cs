@@ -11,21 +11,43 @@ public class move : MonoBehaviour {
 
     public OffMeshLinkData link;
 
+    public Vector3 plane_range;
+
+    public bool plane_bool = false;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         target = transform.position;
         animator = GetComponent<Animator>();
         link = agent.currentOffMeshLinkData;
+        plane_range = new Vector3(Random.Range(-16.7f, 16.7f), 0, Random.Range(-16.7f, 16.7f));
     }
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //RaycastHit hit;
+        //if (Input.GetMouseButtonDown(0)&& Physics.Raycast(ray, out hit))
+        //{
+        //    target = hit.point;
+        //}
+
+        Ray ray = new Ray(this.gameObject.transform.position, plane_range - this.gameObject.transform.position);
+        Debug.DrawRay(ray.origin, ray.direction, Color.red);
+        Debug.DrawLine(this.gameObject.transform.position, plane_range, Color.cyan);
         RaycastHit hit;
-        if (Input.GetMouseButtonDown(0)&& Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit))
         {
             target = hit.point;
         }
+
+        if (plane_bool == true)
+        {
+            plane_range = new Vector3(Random.Range(-16.7f, 16.7f), 0, Random.Range(-16.7f, 16.7f));
+            plane_bool = false;
+        }
+
+
         agent.SetDestination(target);
         animator.SetFloat("speed", agent.velocity.sqrMagnitude);
 

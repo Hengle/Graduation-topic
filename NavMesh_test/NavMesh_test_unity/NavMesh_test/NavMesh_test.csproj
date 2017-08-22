@@ -97,6 +97,8 @@
     <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\UnityChan\SplashScreen\Scripts\SplashScreen.cs" />
     <Compile Include="Assets\move.cs" />
+    <Compile Include="Assets\move_2.cs" />
+    <Compile Include="Assets\ray.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
