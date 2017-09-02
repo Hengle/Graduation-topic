@@ -85,6 +85,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AI_look.cs" />
+    <Compile Include="Assets\AI_look_tree.cs" />
     <Compile Include="Assets\AI_manger_2.cs" />
     <Compile Include="Assets\AI_move_tree.cs" />
     <Compile Include="Assets\AI_test1\AI_test.cs" />
@@ -101,6 +102,7 @@
     <Compile Include="Assets\UnityChan\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\UnityChan\SplashScreen\Scripts\SplashScreen.cs" />
+    <Compile Include="Assets\lerp_test.cs" />
     <Compile Include="Assets\nav_map_manger.cs" />
     <Compile Include="Assets\ray.cs" />
   </ItemGroup>

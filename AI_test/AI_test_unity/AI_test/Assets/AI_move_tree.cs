@@ -26,9 +26,11 @@ public class AI_move_tree : MonoBehaviour
 
     public float wait_time_max;
 
-    public Vector3 jump_star;
+    //public Vector3 jump_star;
 
     public Vector3 jump_end;
+
+    public bool jumping_bool = false;
 
     private void Awake()
     {
@@ -47,6 +49,17 @@ public class AI_move_tree : MonoBehaviour
     void Update()
     {
         player_animator.SetFloat("speed", player_agent.velocity.sqrMagnitude);
+        player_animator.SetFloat("jump", Mathf.Abs(player_agent.velocity.y));
+        //print(player_agent.velocity + " " + player_agent.velocity.sqrMagnitude + " " + player.GetComponent<Rigidbody>().velocity);
+        //player_animator.SetFloat("speed", player.GetComponent<Rigidbody>().velocity.sqrMagnitude);
+        //print(player.GetComponent<Rigidbody>().velocity.sqrMagnitude);
+
+        //if (jumping_bool == true)
+        //{
+
+        //    jumping();
+        //}
+
     }
 
     public void null_function()
@@ -54,13 +67,13 @@ public class AI_move_tree : MonoBehaviour
 
     }
 
-    public ray ray;
+    //public ray ray;
 
     public void move_tree_move()
     {
-        //target = nav_map_manger.instance.map_point();
+        target = nav_map_manger.instance.map_point();
 
-        target = ray.target;//test
+        //target = ray.target;//test
 
         walk_wait_time = Random.Range(1f, 5f);
 
@@ -96,11 +109,17 @@ public class AI_move_tree : MonoBehaviour
             ai_animator.SetBool("walk", true);
             ai_animator.SetBool("run", false);
         }
+
+        if (Vector3.Distance(player.transform.position, target) < 1f)
+        {
+            ai_animator.SetBool("wait", true);
+        }
+
     }
 
     public void move_tree_exit()
     {
-        target =new  Vector3(0, 0, 0);
+        target = Vector3.zero;
 
         walk_wait_time = 0;
 
@@ -108,10 +127,14 @@ public class AI_move_tree : MonoBehaviour
 
         player_agent.speed = walk_speed;
 
+        //jump_star = Vector3.zero;
+        jump_end = Vector3.zero;
+
         ai_animator.SetBool("walk", false);
         ai_animator.SetBool("run", false);
         ai_animator.SetBool("move", false);
         ai_animator.SetBool("wait", false);
+        ai_animator.SetBool("jump", false);
     }
 
     public void  move_tree_wait()
@@ -126,13 +149,33 @@ public class AI_move_tree : MonoBehaviour
 
     public void move_tree_is_jump()
     {
-        //if(player_agent.isOnOffMeshLink == true)
-        //{
-        //    player_agent.enabled = false;
+        if (player_agent.isOnOffMeshLink == true)
+        {
+            //jump_star = player_agent.currentOffMeshLinkData.startPos;
+            jump_end = player_agent.currentOffMeshLinkData.endPos;
+            //player_animator.SetBool("jump bool", true);
+            //player_agent.enabled = false;
+            ai_animator.SetBool("jump", true);
+        }
+    }
 
-        //    jump_star = player_agent.currentOffMeshLinkData.startPos;
-        //    jump_end = player_agent.currentOffMeshLinkData.endPos;
-        //}
+    public void move_tree_jumping()
+    {
+        //player.transform.position = Vector3.Lerp(jump_star, jump_end, 10f);
+        //player.transform.position = Vector3.Lerp(player.transform.position, jump_end, 1f);
+        //jumping_bool = true;
+    }
+
+    void jumping()
+    {
+
+        Vector3 next_pos;
+        //player.transform.position = Vector3.Lerp(player.transform.position, jump_end, 1f * Time.deltaTime);
+        next_pos = Vector3.Lerp(player.transform.position, jump_end, 1f * Time.deltaTime);
+        player_animator.SetFloat("jump", Mathf.Abs(next_pos.y - player.transform.position.y));
+        
+        print(next_pos + " " + player.transform.position + " " + (next_pos - player.transform.position));
+        player.transform.position = next_pos;
     }
 
 }
