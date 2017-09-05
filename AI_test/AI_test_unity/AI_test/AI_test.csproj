@@ -102,6 +102,7 @@
     <Compile Include="Assets\UnityChan\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\UnityChan\SplashScreen\Scripts\SplashScreen.cs" />
+    <Compile Include="Assets\animator_event_script.cs" />
     <Compile Include="Assets\lerp_test.cs" />
     <Compile Include="Assets\nav_map_manger.cs" />
     <Compile Include="Assets\ray.cs" />

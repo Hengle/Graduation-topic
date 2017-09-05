@@ -32,6 +32,10 @@ public class AI_move_tree : MonoBehaviour
 
     public bool jumping_bool = false;
 
+    public Vector3 player_last_vec3;
+
+    public float player_stuck_time = 2f;
+
     private void Awake()
     {
         player_agent = player.GetComponent<NavMeshAgent>();
@@ -59,6 +63,8 @@ public class AI_move_tree : MonoBehaviour
 
         //    jumping();
         //}
+
+        //print(player_agent.pathStatus);
 
     }
 
@@ -176,6 +182,27 @@ public class AI_move_tree : MonoBehaviour
         
         print(next_pos + " " + player.transform.position + " " + (next_pos - player.transform.position));
         player.transform.position = next_pos;
+    }
+
+    public void move_tree_is_stuck()
+    {
+
+
+        if (player_last_vec3 != player.transform.position)
+        {
+            player_last_vec3 = player.transform.position;
+        }
+        else if ((player_last_vec3 == player.transform.position) && (ai_animator.GetBool("wait") == false)) 
+        {
+            player_stuck_time -= 1f;
+        }
+
+        if(player_stuck_time <= 0)
+        {
+            ai_animator.SetBool("wait", true);
+            player_stuck_time = 2f;
+        }
+
     }
 
 }

@@ -44,7 +44,7 @@ public class nav_map_manger : MonoBehaviour {
         Debug.DrawLine(ray_gameobject.gameObject.transform.position, plane_range, Color.cyan);
 
         RaycastHit hit;
-        if (Physics.Raycast(ray, out hit))
+        if (Physics.Raycast(ray, out hit, 1 << LayerMask.NameToLayer("floor")))
         {
             target =  hit.point;
         }
