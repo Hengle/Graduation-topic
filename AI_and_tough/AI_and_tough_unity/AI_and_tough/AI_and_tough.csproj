@@ -106,8 +106,10 @@
     <Compile Include="Assets\AI\lerp_test.cs" />
     <Compile Include="Assets\AI\nav_map_manger.cs" />
     <Compile Include="Assets\AI\ray.cs" />
+    <Compile Include="Assets\Ui_toggle_id.cs" />
     <Compile Include="Assets\hand_tough_manger.cs" />
     <Compile Include="Assets\prop_manger.cs" />
+    <Compile Include="Assets\prop_rule_manger.cs" />
     <Compile Include="Assets\tough\button_prop.cs" />
     <Compile Include="Assets\tough\camera_z_ray.cs" />
     <Compile Include="Assets\tough\hand_all.cs" />

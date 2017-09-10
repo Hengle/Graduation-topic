@@ -19,12 +19,10 @@ public class hand_tough_manger : MonoBehaviour {
 
     //移動速度
     [Header("移動速度")]
-    [Range(0f, 100f)]
     public float move_speed = 10f;
 
     //移動速度
     [Header("旋轉速度")]
-    [Range(0f, 200f)]
     public float rotate_speed = 100f;
 
     //第一根手指位置
@@ -54,12 +52,10 @@ public class hand_tough_manger : MonoBehaviour {
 
     //攝影機最遠位置
     [Header("攝影機最遠位置")]
-    [Range(0f, 50f)]
     public float camera_up = 20f;
 
     //攝影機最近位置
     [Header("攝影機最近位置")]
-    [Range(0f, 50f)]
     public float camera_down = 10f;
 
     //攝影機原始位置
@@ -83,7 +79,7 @@ public class hand_tough_manger : MonoBehaviour {
     public bool reduction = false;
 
     //腳本開關
-    [Header("腳本開關")]
+    [Header("腳本是否關閉")]
     public bool script_close = false;
 
     private void Awake()
@@ -309,9 +305,9 @@ public class hand_tough_manger : MonoBehaviour {
                         //當兩指距離越遠，Z位置加的越多，相反之
                         //Camera.main.transform.Translate(0, 0, move * Time.deltaTime);
 
-                        if ((Vector3.Distance(point.transform.position, camera_gam.transform.position) - move * Time.deltaTime >= camera_down) && (Vector3.Distance(point.transform.position, camera_gam.transform.position) - move * Time.deltaTime <= camera_up))
+                        if ((Vector3.Distance(point.transform.position, camera_gam.transform.position) - move * move_speed * Time.deltaTime >= camera_down) && (Vector3.Distance(point.transform.position, camera_gam.transform.position) - move * move_speed * Time.deltaTime <= camera_up))
                         {
-                            camera_gam.transform.Translate(0, 0, move * Time.deltaTime);
+                            camera_gam.transform.Translate(0, 0, move * move_speed * Time.deltaTime);
                         }
                         //else
                         //{
