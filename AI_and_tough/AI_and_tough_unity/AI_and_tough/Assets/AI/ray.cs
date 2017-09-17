@@ -58,7 +58,7 @@ public class ray : MonoBehaviour {
     {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Input.GetMouseButton(0) &&Physics.Raycast(ray, out hit, 1 << LayerMask.NameToLayer("floor")))
+        if (Input.GetMouseButton(0) &&Physics.Raycast(ray, out hit, 1 << LayerMask.NameToLayer("ray")))
         {
             target = hit.point;
         }
