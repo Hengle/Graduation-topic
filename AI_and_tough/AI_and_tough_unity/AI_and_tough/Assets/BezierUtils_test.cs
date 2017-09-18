@@ -6,7 +6,7 @@ public class BezierUtils_test : MonoBehaviour {
 
     public Transform[] controlPoints;
 
-    public BezierUtils _bezierUtils;
+    //public BezierUtils _bezierUtils;
 
     public Vector3[] aaa;
 
@@ -18,7 +18,7 @@ public class BezierUtils_test : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-       aaa = _bezierUtils.GetBeizerList(controlPoints[0].transform.position, controlPoints[1].transform.position, controlPoints[2].transform.position,50);
+       //aaa = _bezierUtils.GetBeizerList(controlPoints[0].transform.position, controlPoints[1].transform.position, controlPoints[2].transform.position,50);
     }
 	
 	// Update is called once per frame

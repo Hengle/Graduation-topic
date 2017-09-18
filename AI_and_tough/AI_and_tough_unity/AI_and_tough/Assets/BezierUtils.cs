@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BezierUtils : MonoBehaviour {
+public static class BezierUtils {
 
     /// <summary>
     /// 根据T值，计算贝塞尔曲线上面相对应的点(2次貝茲曲線)
