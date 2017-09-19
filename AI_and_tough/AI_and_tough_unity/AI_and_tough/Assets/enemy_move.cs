@@ -45,6 +45,10 @@ public class enemy_move : MonoBehaviour
     [Header("走路速度")]
     public float walk_speed;
 
+    public Vector3 enemy_last_vec3;
+
+    public float enemy_stuck_time = 2f;
+
     private void Awake()
     {
         enemy_navmeshagent = AI_gameobject_all_manger.instance.enemy_nav;
@@ -124,6 +128,27 @@ public class enemy_move : MonoBehaviour
 
         AI_tree_change.instance.change_animator_name("walk", false);
         AI_tree_change.instance.change_animator_name("run", true);
+    }
+
+    public void move_tree_is_stuck()
+    {
+
+
+        //if (enemy_last_vec3 != enemy_game.transform.position)
+        //{
+        //    enemy_last_vec3 = enemy_game.transform.position;
+        //}
+        //else if ((enemy_last_vec3 == enemy_game.transform.position) && (ai_animator.GetBool("wait") == false))
+        //{
+        //    enemy_stuck_time -= 1f;
+        //}
+
+        //if (enemy_stuck_time <= 0)
+        //{
+        //    ai_animator.SetBool("wait", true);
+        //    enemy_stuck_time = 2f;
+        //}
+
     }
 
 }

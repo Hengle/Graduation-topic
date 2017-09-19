@@ -94,8 +94,10 @@
     <Compile Include="Assets\AI\lerp_test.cs" />
     <Compile Include="Assets\AI\nav_map_manger.cs" />
     <Compile Include="Assets\AI\ray.cs" />
+    <Compile Include="Assets\AI_gameobject_all.cs" />
     <Compile Include="Assets\AI_gameobject_all_manger.cs" />
     <Compile Include="Assets\AI_tree_change.cs" />
+    <Compile Include="Assets\AI_tree_change_manger.cs" />
     <Compile Include="Assets\Bezier.cs" />
     <Compile Include="Assets\BezierUtils.cs" />
     <Compile Include="Assets\BezierUtils_test.cs" />
@@ -115,6 +117,7 @@
     <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\UnityChan\SplashScreen\Scripts\SplashScreen.cs" />
     <Compile Include="Assets\enemy_move.cs" />
+    <Compile Include="Assets\enemy_move_event.cs" />
     <Compile Include="Assets\hand_tough_manger.cs" />
     <Compile Include="Assets\newDus.cs" />
     <Compile Include="Assets\prop_manger.cs" />
