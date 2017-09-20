@@ -116,6 +116,8 @@
     <Compile Include="Assets\UnityChan\Scripts\ThirdPersonCamera.cs" />
     <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\UnityChan\SplashScreen\Scripts\SplashScreen.cs" />
+    <Compile Include="Assets\bezia_static.cs" />
+    <Compile Include="Assets\enemy_jump_event.cs" />
     <Compile Include="Assets\enemy_move.cs" />
     <Compile Include="Assets\enemy_move_event.cs" />
     <Compile Include="Assets\hand_tough_manger.cs" />

@@ -43,7 +43,7 @@ public static class BezierUtils {
             Vector3 pixel = CalculateCubicBezierPoint(t, startPoint,
                 controlPoint, endPoint);
             path[i - 1] = pixel;
-            Debug.Log(path[i-1]);
+            //Debug.Log(path[i-1]);
         }
         return path;
  
