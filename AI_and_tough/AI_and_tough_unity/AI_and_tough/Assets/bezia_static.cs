@@ -7,10 +7,10 @@ public class bezia_static : MonoBehaviour
 
     [Header("起始点")]
     public GameObject startPoint;
-    [Header("控制点")]
-    public GameObject controlPoint;
     [Header("目标点")]
     public GameObject endPoint;
+    [Header("控制点")]
+    public GameObject controlPoint;
     [Header("采样点的数量")]
     public int segmentNum;
     [Header("位置")]

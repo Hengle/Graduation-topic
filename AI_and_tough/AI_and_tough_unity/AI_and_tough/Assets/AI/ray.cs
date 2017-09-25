@@ -61,6 +61,7 @@ public class ray : MonoBehaviour {
         if (Input.GetMouseButton(0) &&Physics.Raycast(ray, out hit, 1 << LayerMask.NameToLayer("ray")))
         {
             target = hit.point;
+            print(hit.collider.gameObject.name);
         }
 
         //Ray ray = new Ray(this.gameObject.transform.position, plane_range - this.gameObject.transform.position);

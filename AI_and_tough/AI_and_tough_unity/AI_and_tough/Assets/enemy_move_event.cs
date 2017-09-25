@@ -10,6 +10,8 @@ public class enemy_move_event : MonoBehaviour
 
     public AI_tree_change_manger _AI_tree_change_manger;
 
+    public enemy_jump_event _enemy_jump_event;
+
     public enum move_static { none, walk, run }
 
     [Header("移動腳本")]
@@ -60,6 +62,7 @@ public class enemy_move_event : MonoBehaviour
     {
         _AI_gameobject_all = this.GetComponent<AI_gameobject_all>();
         _AI_tree_change_manger = this.GetComponent<AI_tree_change_manger>();
+        _enemy_jump_event = this.GetComponent<enemy_jump_event>();
         enemy_navmeshagent = _AI_gameobject_all.enemy_nav;
         enemy_game = _AI_gameobject_all.enemy;
     }
@@ -177,7 +180,10 @@ public class enemy_move_event : MonoBehaviour
             //jump_end = player_agent.currentOffMeshLinkData.endPos;
             //player_animator.SetBool("jump bool", true);
             //player_agent.enabled = false;
+            _enemy_jump_event.start_pos = enemy_navmeshagent.currentOffMeshLinkData.startPos;
             _AI_tree_change_manger.change_animator_name("jump", true);
+            _AI_tree_change_manger.change_animator_name("walk", false);
+            _AI_tree_change_manger.change_animator_name("run", false);
             //print(enemy_navmeshagent.currentOffMeshLinkData.startPos +" " + enemy_navmeshagent.currentOffMeshLinkData.endPos);
         }
         else if (enemy_navmeshagent.isOnOffMeshLink == false)

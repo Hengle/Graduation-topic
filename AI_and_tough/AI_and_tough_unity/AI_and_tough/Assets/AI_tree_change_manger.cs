@@ -5,16 +5,19 @@ using UnityEngine;
 public class AI_tree_change_manger : MonoBehaviour
 {
 
-    public Animator ai_tree_animator;
+    public Animator _ai_tree_animator;
 
     public string move_tree_name;
 
-    public enemy_move_event enemy_move_script;
+    public enemy_move_event _enemy_move_script;
+
+    public enemy_jump_event _enemy_jump_event;
 
     void Awake()
     {
-        enemy_move_script = this.GetComponent<enemy_move_event>();
-        ai_tree_animator = this.GetComponent<Animator>();
+        _enemy_move_script = this.GetComponent<enemy_move_event>();
+        _ai_tree_animator = this.GetComponent<Animator>();
+        _enemy_jump_event = this.GetComponent<enemy_jump_event>();
     }
 
 
@@ -37,12 +40,12 @@ public class AI_tree_change_manger : MonoBehaviour
 
     public void change_animator_name(string name, bool status_bool)
     {
-        ai_tree_animator.SetBool(name, status_bool);
+        _ai_tree_animator.SetBool(name, status_bool);
     }
 
     public bool get_animator_name(string name)
     {
-        return ai_tree_animator.GetBool(name);
+        return _ai_tree_animator.GetBool(name);
     }
 
     public void animator_name(string name)
@@ -61,13 +64,13 @@ public class AI_tree_change_manger : MonoBehaviour
 
                 break;
             case "walk":
-                enemy_move_script.move_go_if();
+                _enemy_move_script.move_go_if();
                 break;
             case "run":
-                enemy_move_script.move_go_if();
+                _enemy_move_script.move_go_if();
                 break;
             case "jump":
-
+                _enemy_jump_event.check_gameobject();
                 break;
             default:
                 break;
