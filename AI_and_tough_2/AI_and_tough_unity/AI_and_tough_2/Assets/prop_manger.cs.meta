@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 282fc76506a29c54d85f65206fe1d4d0
+timeCreated: 1505040337
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - prop_gameobject: {instanceID: 0}
+  - ui_gameobject: {instanceID: 0}
+  - camera_ray: {instanceID: 0}
+  - transparent_game: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
