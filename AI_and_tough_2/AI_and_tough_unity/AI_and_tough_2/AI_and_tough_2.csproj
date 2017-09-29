@@ -118,6 +118,7 @@
     <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
     <Compile Include="Assets\UnityChan\SplashScreen\Scripts\SplashScreen.cs" />
     <Compile Include="Assets\bezia_static.cs" />
+    <Compile Include="Assets\enemy_animator_event.cs" />
     <Compile Include="Assets\enemy_exit_event.cs" />
     <Compile Include="Assets\enemy_jump.cs" />
     <Compile Include="Assets\enemy_jump_event.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Assets\tough\test_prop.cs" />
     <Compile Include="Assets\tough\toggle_prop.cs" />
     <Compile Include="Assets\tough\z_range_draw.cs" />
+    <Compile Include="Assets\tr_point_test.cs" />
     <Compile Include="Assets\unity_event_test.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -33,6 +33,8 @@ public class enemy_jump_event : MonoBehaviour
     //public Vector3[] jump_vec3;
     [Header("跳躍軌道")]
     public List<Vector3> jump_vec3 = new List<Vector3>();
+    [Header("跳躍速度")]
+    public float jump_speed;
     [Header("陣列位置")]
     public int num = 0;
 
@@ -113,9 +115,9 @@ public class enemy_jump_event : MonoBehaviour
         }
 
         //enemy_game.transform.position = jump_vec3[num];
-        enemy_game.transform.position = Vector3.Lerp(enemy_game.transform.position, jump_vec3[num],10f);
+        enemy_game.transform.position = Vector3.Lerp(enemy_game.transform.position, jump_vec3[num], jump_speed *Time.deltaTime);
 
-        if(num == (jump_vec3.Count - 1))
+        if (num == (jump_vec3.Count - 1))
         {
             //enemy_navmeshagent.enabled = true;
             jump_off();

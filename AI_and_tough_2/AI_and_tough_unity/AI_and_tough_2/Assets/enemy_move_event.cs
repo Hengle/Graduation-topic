@@ -46,17 +46,21 @@ public class enemy_move_event : MonoBehaviour
     [Header("從走變成跑時間，最大")]
     public float walk_wait_time_max;
 
-    [Header("跑步速度")]
-    public float run_speed;
-
+    
     [Header("走路速度")]
     public float walk_speed;
+
+    [Header("跑步速度")]
+    public float run_speed;
 
     [Header("上一個位置")]
     public Vector3 enemy_last_vec3;
 
     [Header("卡住倒數")]
-    public float enemy_stuck_time = 2f;
+    public float enemy_stuck_time;
+
+    [Header("卡住倒數(原本)")]
+    public float enemy_stuck_time_last;
 
     public bool is_jump = false;
 
@@ -67,6 +71,7 @@ public class enemy_move_event : MonoBehaviour
         _enemy_jump_event = this.GetComponent<enemy_jump_event>();
         enemy_navmeshagent = _AI_gameobject_all.enemy_nav;
         enemy_game = _AI_gameobject_all.enemy;
+        enemy_stuck_time = enemy_stuck_time_last;
     }
 
     // Use this for initialization
@@ -174,7 +179,7 @@ public class enemy_move_event : MonoBehaviour
         {
             //enemy_move_static = move_static.none;
             _AI_tree_change_manger.change_animator_name("exit", true);
-            enemy_stuck_time = 2f;
+            enemy_stuck_time = enemy_stuck_time_last;
         }
 
     }
