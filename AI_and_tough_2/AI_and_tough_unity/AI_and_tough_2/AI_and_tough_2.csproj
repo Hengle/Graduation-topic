@@ -96,6 +96,7 @@
     <Compile Include="Assets\AI\ray.cs" />
     <Compile Include="Assets\AI_gameobject_all.cs" />
     <Compile Include="Assets\AI_gameobject_all_manger.cs" />
+    <Compile Include="Assets\AI_look_event_manger.cs" />
     <Compile Include="Assets\AI_tree_change.cs" />
     <Compile Include="Assets\AI_tree_change_manger.cs" />
     <Compile Include="Assets\AI_tree_manger_event.cs" />
