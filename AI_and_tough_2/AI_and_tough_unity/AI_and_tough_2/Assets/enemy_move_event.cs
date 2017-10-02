@@ -82,13 +82,14 @@ public class enemy_move_event : MonoBehaviour
     }
 
     // Update is called once per frame
-    //void Update()
-    //{
-    //    if (enemy_move_static != move_static.none)
-    //    {
-    //        walk_wait_time -= Time.deltaTime;
-    //    }
-    //}
+    void Update()
+    {
+        //if (enemy_move_static != move_static.none)
+        //{
+        //    walk_wait_time -= Time.deltaTime;
+        //}
+        //print(_AI_gameobject_all.enemy_nav.isStopped);
+    }
 
     public void move_go_if()
     {

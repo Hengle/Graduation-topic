@@ -8,6 +8,10 @@ public class AI_look : MonoBehaviour
 
     //public see_direction see_direct;
 
+    public LayerMask layer;
+
+    public AI_look_event_manger _AI_look_event_manger;
+
     public Collider[] serch_colloder_find;
 
     //public Vector3 see_direct_vec3;
@@ -22,8 +26,8 @@ public class AI_look : MonoBehaviour
     void Start()
     {
         //start_see_direct();
-
-        if(min_eye_distance >max_eye_distance)
+        _AI_look_event_manger = this.GetComponent<AI_look_event_manger>();
+        if (min_eye_distance >max_eye_distance)
         {
             min_eye_distance = 1f;
             max_eye_distance = 2f;
@@ -79,7 +83,7 @@ public class AI_look : MonoBehaviour
     void collider_serch()
     {
         //範圍內所有物件
-        serch_colloder_find = Physics.OverlapSphere(this.transform.position, max_eye_distance/*, 1 << LayerMask.NameToLayer("wall")*/);
+        serch_colloder_find = Physics.OverlapSphere(this.transform.position, max_eye_distance , layer /*, 1 << LayerMask.NameToLayer("wall")*/);
         //LayerMask mask = 1 << 2; 表示开启Layer2。
         //LayerMask mask = 0 << 5;表示关闭Layer5。
         //LayerMask mask = 1<<2|1<<8;表示开启Layer2和Layer8。
@@ -90,9 +94,12 @@ public class AI_look : MonoBehaviour
         {
             if (see_distance(serch_colloder) == true)
             {
-                print("I see a target");
+                //print("I see a target");
                 //AI_manger.instance.see_wall = true;
                 //在这里执行你想要进行的操作，比如设定寻路目标之类的
+
+                _AI_look_event_manger.change_animator_name(serch_colloder.gameObject.tag, true);
+
             }
             //else if (see_distance(serch_colloder) == false)
             //{
@@ -149,7 +156,7 @@ public class AI_look : MonoBehaviour
             {
                 if (canSee(target_collider) == true)
                 {
-                    print("看到");
+                    //print("看到");
                     return true;
                 }
             }
