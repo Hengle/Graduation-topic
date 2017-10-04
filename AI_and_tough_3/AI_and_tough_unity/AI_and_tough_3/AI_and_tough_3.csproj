@@ -146,6 +146,7 @@
     <Compile Include="Assets\enemy_wait.cs" />
     <Compile Include="Assets\enemy_wait_event.cs" />
     <Compile Include="Assets\event_name.cs" />
+    <Compile Include="Assets\finger.cs" />
     <Compile Include="Assets\hand_tough_manger.cs" />
     <Compile Include="Assets\look_enemy.cs" />
     <Compile Include="Assets\newDus.cs" />
