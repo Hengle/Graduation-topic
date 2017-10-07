@@ -76,12 +76,6 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.iOS.Extensions.Common">
-      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AI\AI_look.cs" />
@@ -150,6 +144,7 @@
     <Compile Include="Assets\hand_tough_manger.cs" />
     <Compile Include="Assets\look_enemy.cs" />
     <Compile Include="Assets\newDus.cs" />
+    <Compile Include="Assets\press_look_boob.cs" />
     <Compile Include="Assets\prop_manger.cs" />
     <Compile Include="Assets\prop_rule_manger.cs" />
     <Compile Include="Assets\tough\button_prop.cs" />

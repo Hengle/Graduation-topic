@@ -98,6 +98,7 @@ public class AI_look : MonoBehaviour
                 //AI_manger.instance.see_wall = true;
                 //在这里执行你想要进行的操作，比如设定寻路目标之类的
 
+                _AI_look_event_manger.look_gameobject = serch_colloder.gameObject;
                 _AI_look_event_manger.change_animator_name(serch_colloder.gameObject.tag, true);
 
             }

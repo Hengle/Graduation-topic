@@ -104,6 +104,7 @@ public class prop_rule_manger : MonoBehaviour {
 
                 //prop_vec3_manger.prop_end();
                 prop_manger_.prop_end();
+                Destroy(this.transform.GetChild(0).gameObject);
                 Destroy(this);
 
             }

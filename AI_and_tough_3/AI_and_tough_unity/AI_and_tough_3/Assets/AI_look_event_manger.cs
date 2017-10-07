@@ -11,9 +11,13 @@ public class AI_look_event_manger : MonoBehaviour {
 
     public bool is_on = false;
 
-    public UnityEvent events;
+    public GameObject look_gameobject;
+
+    //public UnityEvent events;
 
     public UnityEvent ai_rester;
+
+ 
 
     void Awake()
     {
@@ -34,11 +38,11 @@ public class AI_look_event_manger : MonoBehaviour {
         {
             ai_rester.Invoke();
         }
-        else if ((look_tree_name != "null") && (is_on == false)) 
-        {
-            is_on = true;
-            events.Invoke();
-        }
+        //else if ((look_tree_name != "null") && (is_on == false)) 
+        //{
+        //    is_on = true;
+        //    events.Invoke();
+        //}
     }
 
     public void null_function()

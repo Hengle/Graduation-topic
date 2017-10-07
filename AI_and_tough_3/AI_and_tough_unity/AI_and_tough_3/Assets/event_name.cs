@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class event_name : MonoBehaviour
 {
@@ -11,11 +12,21 @@ public class event_name : MonoBehaviour
 
     public string _AI_look_event_manger_event_name;
 
+    public GameObject _AI_look_event_manger_event_gameObject;
+
+    public UnityEvent event_on;
+
     // Update is called once per frame
     void Update()
     {
         _AI_look_event_manger_event_name = _AI_look_event_manger.look_tree_name;
         _AI_look_event_manger_animator = _AI_look_event_manger._look_tree_animator;
+        _AI_look_event_manger_event_gameObject = _AI_look_event_manger.look_gameobject;
+
+        if (_AI_look_event_manger_event_name != "null")
+        {
+            event_on.Invoke();
+        }
     }
 
     public void events_close()

@@ -5,11 +5,12 @@ using UnityEngine.AI;
 
 public class look_enemy : MonoBehaviour
 {
+    [Header(" ID = look_enemy")]
 
     public AI_gameobject_all _AI_gameobject_all;
 
     public event_name _event_name;
-
+  
     public static string ID = "look_enemy";
 
     public NavMeshAgent enemy_nav;
