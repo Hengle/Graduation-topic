@@ -143,6 +143,7 @@
     <Compile Include="Assets\finger.cs" />
     <Compile Include="Assets\hand_tough_manger.cs" />
     <Compile Include="Assets\look_enemy.cs" />
+    <Compile Include="Assets\music_boob.cs" />
     <Compile Include="Assets\newDus.cs" />
     <Compile Include="Assets\press_look_boob.cs" />
     <Compile Include="Assets\prop_manger.cs" />
