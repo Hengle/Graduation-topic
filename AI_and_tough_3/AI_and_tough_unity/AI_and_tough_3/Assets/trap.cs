@@ -46,7 +46,9 @@ public class trap : MonoBehaviour {
             {
                 serch_colloder.transform.GetComponentInChildren<AI_tree_change_manger>().change_animator_name("exit", true);
                 serch_colloder.transform.GetComponentInChildren<enemy_move_event>().target = serch_colloder.gameObject.transform.position;
-                Destroy(this);
+                ui_manger.Instence.qte = true;
+                //serch_colloder.transform.GetComponentInChildren<enemy_wait_event>().time = 9999;
+                //Destroy(this);
             }
         }
     }

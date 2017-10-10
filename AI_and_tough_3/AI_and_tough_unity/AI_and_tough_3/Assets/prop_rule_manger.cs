@@ -34,6 +34,8 @@ public class prop_rule_manger : MonoBehaviour {
     [Header("長按盲區")]
     [Range(0f, 10f)]
     public float prop_press_dead = 3f;
+    [Header("陷阱腳本")]
+    public trap _tarp;
 
     //成功更換得材質球
     [Header("長按或延遲 成功更換得材質球" + "  " + "原本為完全透明材質球")]
@@ -104,6 +106,7 @@ public class prop_rule_manger : MonoBehaviour {
 
                 //prop_vec3_manger.prop_end();
                 prop_manger_.prop_end();
+                _tarp.enabled = true;
                 Destroy(this.transform.GetChild(0).gameObject);
                 Destroy(this);
 
@@ -150,7 +153,7 @@ public class prop_rule_manger : MonoBehaviour {
     void prop_lose()
     {
         prop_manger_.is_first_prop_ok = false;
-        Destroy(this.gameObject);
+        Destroy(this.transform.parent.gameObject);
     }
 
 }

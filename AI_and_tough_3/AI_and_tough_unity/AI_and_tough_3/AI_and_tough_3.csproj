@@ -76,6 +76,12 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Common">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\AI\AI_look.cs" />
@@ -100,6 +106,7 @@
     <Compile Include="Assets\Parabola.cs" />
     <Compile Include="Assets\QTE\Script\Check.cs" />
     <Compile Include="Assets\QTE\Script\PlayerRotation.cs" />
+    <Compile Include="Assets\QTE_manger.cs" />
     <Compile Include="Assets\Radar.cs" />
     <Compile Include="Assets\Ui_toggle_id.cs" />
     <Compile Include="Assets\UnityChan\Scripts\AutoBlink.cs" />
@@ -130,6 +137,7 @@
     <Compile Include="Assets\VoxelMax\Source\VoxelMeshOptimizer.cs" />
     <Compile Include="Assets\VoxelMax\Source\VoxelPhysics.cs" />
     <Compile Include="Assets\animator_event_off.cs" />
+    <Compile Include="Assets\arrow_trigger.cs" />
     <Compile Include="Assets\bezia_static.cs" />
     <Compile Include="Assets\boob.cs" />
     <Compile Include="Assets\enemy_animator_event.cs" />
@@ -151,6 +159,7 @@
     <Compile Include="Assets\press_look_boob.cs" />
     <Compile Include="Assets\prop_manger.cs" />
     <Compile Include="Assets\prop_rule_manger.cs" />
+    <Compile Include="Assets\target_trigger.cs" />
     <Compile Include="Assets\tough\button_prop.cs" />
     <Compile Include="Assets\tough\camera_z_ray.cs" />
     <Compile Include="Assets\tough\hand_all.cs" />
@@ -166,6 +175,7 @@
     <Compile Include="Assets\tough\z_range_draw.cs" />
     <Compile Include="Assets\tr_point_test.cs" />
     <Compile Include="Assets\trap.cs" />
+    <Compile Include="Assets\ui_manger.cs" />
     <Compile Include="Assets\unity_event_test.cs" />
   </ItemGroup>
   <ItemGroup>

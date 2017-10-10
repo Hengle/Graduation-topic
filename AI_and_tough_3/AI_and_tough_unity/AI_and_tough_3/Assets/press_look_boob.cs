@@ -12,7 +12,10 @@ public class press_look_boob : MonoBehaviour {
 
     private void Awake()
     {
-        parent = this.gameObject.transform.parent.gameObject;
+        if(parent == null)
+        {
+            parent = this.gameObject.transform.parent.gameObject;
+        }
         _prop_manger = FindObjectOfType<prop_manger>();
     }
 
