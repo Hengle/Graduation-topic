@@ -204,7 +204,12 @@ public class hand_tough_manger : MonoBehaviour {
                         {
                             //當X軸卡到-90度時停止旋轉
                             //減360 是因 -10度 時 在unity裡表示350度 需減掉才能運算
-                            if ((point.transform.rotation.eulerAngles.x - 360f) + one_finger_displacement.y * rotate_speed * Time.deltaTime < -90)
+                            //if ((point.transform.rotation.eulerAngles.x - 360f) + one_finger_displacement.y * rotate_speed * Time.deltaTime < -90)
+                            //{
+                            //    return;
+                            //}
+
+                            if ((point.transform.rotation.eulerAngles.x - 360f) + one_finger_displacement.y * rotate_speed * Time.deltaTime < 0)
                             {
                                 return;
                             }

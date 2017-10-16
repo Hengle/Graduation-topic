@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AI_and_tough.unity
+- path: Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/OneFinger.unity
   isLoaded: 1
   isActive: 1
