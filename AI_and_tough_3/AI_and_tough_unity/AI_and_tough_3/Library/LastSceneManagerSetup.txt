@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/OneFinger.unity
+- path: Assets/QTE2/QTE2.unity
   isLoaded: 1
   isActive: 1
