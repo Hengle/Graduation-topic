@@ -153,6 +153,7 @@
     <Compile Include="Assets\Parabola.cs" />
     <Compile Include="Assets\QTE\Script\Check.cs" />
     <Compile Include="Assets\QTE\Script\PlayerRotation.cs" />
+    <Compile Include="Assets\QTE2\QTE_angle_tough.cs" />
     <Compile Include="Assets\QTE2\swipe_2.cs" />
     <Compile Include="Assets\QTE_manger.cs" />
     <Compile Include="Assets\Radar.cs" />

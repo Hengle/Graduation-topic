@@ -13,6 +13,8 @@ public class swipe_2 : MonoBehaviour {
     [Header("以30度為區間 也就是 -30~30為right 31~59為other")]
     public string news;
 
+    public QTE_angle_tough _QTE_angle_tough;
+
     // Subscribe to events
     void OnEnable()
     {
@@ -24,7 +26,6 @@ public class swipe_2 : MonoBehaviour {
     void OnDisable()
     {
         UnsubscribeEvent();
-
     }
 
     void OnDestroy()
@@ -86,7 +87,17 @@ public class swipe_2 : MonoBehaviour {
             news = gesture.swipe.ToString();
             tough_vec2 = gesture.swipeVector.normalized;
             angle = angles;
+
+            _QTE_angle_tough.QTE_on(angle);
         }
 
     }
+
+    public void angle_end()
+    {
+        news = "";
+        tough_vec2 = Vector2.zero;
+        angle = 0;
+    }
+
 }
