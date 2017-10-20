@@ -1,0 +1,243 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:Temp/Assembly-CSharp.dll
+-unsafe
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/Managed/UnityEngine.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/Managed/UnityEditor.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll"
+-r:"C:/Program Files/Unity 5.6.2f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Common.dll"
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_6_OR_NEWER
+-define:UNITY_5_6_2
+-define:UNITY_5_6
+-define:UNITY_5
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_GENERICS
+-define:ENABLE_PVR_GI
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_RUNTIME_NAVMESH_BUILDING
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:ENABLE_NATIVE_ARRAY
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:PLATFORM_SUPPORTS_MONO
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_SCRIPTING_NEW_CSHARP_COMPILER
+-define:ENABLE_VIDEO
+-define:UNITY_ANDROID
+-define:ENABLE_SUBSTANCE
+-define:UNITY_ANDROID_API
+-define:ENABLE_EGL
+-define:ENABLE_NETWORK
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:PLATFORM_SUPPORTS_ADS_ID
+-define:UNITY_CAN_SHOW_SPLASH_SCREEN
+-define:ENABLE_VR
+-define:ENABLE_UNITYADS_RUNTIME
+-define:UNITY_UNITYADS_API
+-define:ENABLE_MONO
+-define:NET_2_0_SUBSET
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:ENABLE_NATIVE_ARRAY_CHECKS
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
+-define:UNITY_HAS_GOOGLEVR
+Assets/AI/AI_look.cs
+Assets/AI/AI_look_tree.cs
+Assets/AI/AI_manger_2.cs
+Assets/AI/AI_move_tree.cs
+Assets/AI/AI_test1/AI_test.cs
+Assets/AI/AI_test2/AI_manger.cs
+Assets/AI/animator_event_script.cs
+Assets/AI/lerp_test.cs
+Assets/AI/nav_map_manger.cs
+Assets/AI/ray.cs
+Assets/AI_gameobject_all.cs
+Assets/AI_gameobject_all_manger.cs
+Assets/AI_look_event_manger.cs
+Assets/AI_tree_change.cs
+Assets/AI_tree_change_manger.cs
+Assets/AI_tree_manger_event.cs
+Assets/Bezier.cs
+Assets/BezierUtils.cs
+Assets/BezierUtils_test.cs
+"Assets/EasyTouch/Example/C# Example/Example for EasyButton/Bullet.cs"
+"Assets/EasyTouch/Example/C# Example/Example for EasyButton/ETPlayer.cs"
+"Assets/EasyTouch/Example/C# Example/Example for EasyButton/ManualControl.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyJoystick/Example-thirdPerson_DirectEventMode/JoystickEvent.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyJoystick/Example_FirstPerson_DirectMode/GUIFirstDirect.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyJoystick/ExitButton.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-2D/Monster.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-FreeCam/FreeCam.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-FreeCam/GuiCam.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-ManipulationImage/GuiPhoto.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-ManipulationImage/Photo.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-MultiLayer/GuiLayer.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-MultiLayer/TouchLayer.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-Multiplefingers/GuiMultiFinger.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-Multiplefingers/ObjectTouch.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-Multiplefingers/ScreenTouch.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-Multiplefingers/SlowRotate.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-OneFinger/DoubleTap.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-OneFinger/Drag.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-OneFinger/GuiOneFinger.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-OneFinger/LongTap.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-OneFinger/Swipe.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-OneFinger/Tap.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-OneFinger/TouchStart.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-StartMenu/GuiStartMenu.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-TwoFinger/GuiTwoFinger.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-TwoFinger/Pinch.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-TwoFinger/Twist.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-TwoFinger/TwoDoubleTap.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-TwoFinger/TwoDrag.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-TwoFinger/TwoLongTap.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-TwoFinger/TwoSwipe.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-TwoFinger/TwoTap.cs"
+"Assets/EasyTouch/Example/C# Example/Examples for EasyTouch/Example-TwoFinger/TwoTouchStart.cs"
+Assets/EasyTouch/Plugins/ECamera.cs
+Assets/EasyTouch/Plugins/EasyButton.cs
+Assets/EasyTouch/Plugins/EasyJoystick.cs
+Assets/EasyTouch/Plugins/EasyTouch.cs
+Assets/EasyTouch/Plugins/EasyTouchInput.cs
+Assets/EasyTouch/Plugins/Finger.cs
+Assets/EasyTouch/Plugins/Gesture.cs
+Assets/EasyTouch/Plugins/MonoSingleton.cs
+Assets/EasyTouch/Plugins/MovingJoystick.cs
+Assets/EasyTouch/Plugins/VirtualScreen.cs
+"Assets/EasyTouch/Plugins/_C#-Event-Template/C_EasyButtonTemplate.cs"
+"Assets/EasyTouch/Plugins/_C#-Event-Template/C_EasyJoystickTemplate.cs"
+"Assets/EasyTouch/Plugins/_C#-Event-Template/C_EasyTouchTemplate.cs"
+Assets/Parabola.cs
+Assets/QTE/Script/Check.cs
+Assets/QTE/Script/PlayerRotation.cs
+Assets/QTE2/QTE_2.cs
+Assets/QTE2/QTE_angle_tough.cs
+"Assets/QTE2/ba;;.cs"
+Assets/QTE2/swipe_2.cs
+Assets/QTE_manger.cs
+Assets/QTE_target_size.cs
+Assets/Radar.cs
+Assets/Ui_toggle_id.cs
+Assets/UnityChan/Scripts/AutoBlink.cs
+Assets/UnityChan/Scripts/CameraController.cs
+Assets/UnityChan/Scripts/FaceUpdate.cs
+Assets/UnityChan/Scripts/IKCtrlRightHand.cs
+Assets/UnityChan/Scripts/IdleChanger.cs
+Assets/UnityChan/Scripts/RandomWind.cs
+Assets/UnityChan/Scripts/SpringBone.cs
+Assets/UnityChan/Scripts/SpringCollider.cs
+Assets/UnityChan/Scripts/SpringManager.cs
+Assets/UnityChan/Scripts/ThirdPersonCamera.cs
+Assets/UnityChan/Scripts/UnityChanControlScriptWithRgidBody.cs
+Assets/UnityChan/SplashScreen/Scripts/SplashScreen.cs
+Assets/VoxelMax/Source/DemoSceneScripts/BombShooter.cs
+Assets/VoxelMax/Source/DemoSceneScripts/BombTimer.cs
+Assets/VoxelMax/Source/DemoSceneScripts/Rocket.cs
+Assets/VoxelMax/Source/DemoSceneScripts/TankBehaviour.cs
+Assets/VoxelMax/Source/StaticValues.cs
+Assets/VoxelMax/Source/Voxel.cs
+Assets/VoxelMax/Source/VoxelAnimator.cs
+Assets/VoxelMax/Source/VoxelArea.cs
+Assets/VoxelMax/Source/VoxelBomb.cs
+Assets/VoxelMax/Source/VoxelContainer.cs
+Assets/VoxelMax/Source/VoxelExplosionParticle.cs
+Assets/VoxelMax/Source/VoxelIngameBuildTask.cs
+Assets/VoxelMax/Source/VoxelLayer.cs
+Assets/VoxelMax/Source/VoxelMeshOptimizer.cs
+Assets/VoxelMax/Source/VoxelPhysics.cs
+Assets/animator_event_off.cs
+Assets/arrow_trigger.cs
+Assets/bezia_static.cs
+Assets/boob.cs
+Assets/draw_attack/DrawTool.cs
+Assets/draw_attack/TestDraw.cs
+Assets/draw_attack/test_daw.cs
+Assets/enemy_animator_event.cs
+Assets/enemy_data.cs
+Assets/enemy_exit_event.cs
+Assets/enemy_jump.cs
+Assets/enemy_jump_event.cs
+Assets/enemy_move.cs
+Assets/enemy_move_event.cs
+Assets/enemy_move_manger.cs
+Assets/enemy_wait.cs
+Assets/enemy_wait_event.cs
+Assets/event_name.cs
+Assets/finger.cs
+Assets/hand_tough_manger.cs
+Assets/look_enemy.cs
+Assets/music_boob.cs
+Assets/newDus.cs
+Assets/press_look_boob.cs
+Assets/prop_manger.cs
+Assets/prop_rule_manger.cs
+Assets/target_trigger.cs
+Assets/tough/button_prop.cs
+Assets/tough/camera_z_ray.cs
+Assets/tough/hand_all.cs
+Assets/tough/hand_tough.cs
+Assets/tough/prop_delay.cs
+Assets/tough/prop_id.cs
+Assets/tough/prop_rule.cs
+Assets/tough/prop_rule_2.cs
+Assets/tough/prop_vec3_manger.cs
+Assets/tough/test_Z_2.cs
+Assets/tough/test_prop.cs
+Assets/tough/toggle_prop.cs
+Assets/tough/z_range_draw.cs
+Assets/tr_point_test.cs
+Assets/trap.cs
+Assets/ui_manger.cs
+Assets/unity_event_test.cs
+-r:"C:\Program Files\Unity 5.6.2f1\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity 5.6.2f1\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll"
+-r:"C:\Program Files\Unity 5.6.2f1\Editor\Data\Mono\lib\mono\unity\UnityScript.dll"
+-r:"C:\Program Files\Unity 5.6.2f1\Editor\Data\Mono\lib\mono\unity\UnityScript.Lang.dll"
+-r:"C:\Program Files\Unity 5.6.2f1\Editor\Data\Mono\lib\mono\unity\Boo.Lang.dll"
+-sdk:unity

@@ -153,9 +153,15 @@
     <Compile Include="Assets\Parabola.cs" />
     <Compile Include="Assets\QTE\Script\Check.cs" />
     <Compile Include="Assets\QTE\Script\PlayerRotation.cs" />
+    <Compile Include="Assets\QTE2\QTE_2.cs" />
     <Compile Include="Assets\QTE2\QTE_angle_tough.cs" />
+    <Compile Include="Assets\QTE2\QTE_event.cs" />
+    <Compile Include="Assets\QTE2\QTE_rotation.cs" />
+    <Compile Include="Assets\QTE2\ball.cs" />
     <Compile Include="Assets\QTE2\swipe_2.cs" />
+    <Compile Include="Assets\QTE2\text_test.cs" />
     <Compile Include="Assets\QTE_manger.cs" />
+    <Compile Include="Assets\QTE_target_size.cs" />
     <Compile Include="Assets\Radar.cs" />
     <Compile Include="Assets\Ui_toggle_id.cs" />
     <Compile Include="Assets\UnityChan\Scripts\AutoBlink.cs" />

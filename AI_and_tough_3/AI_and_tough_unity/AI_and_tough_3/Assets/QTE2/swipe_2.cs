@@ -42,7 +42,7 @@ public class swipe_2 : MonoBehaviour {
 
     void Start()
     {
-        textMesh = GameObject.Find("LastSwipeText").transform.gameObject.GetComponent("TextMesh") as TextMesh;
+        //textMesh = GameObject.Find("LastSwipeText").transform.gameObject.GetComponent("TextMesh") as TextMesh;
     }
 
     // At the swipe beginning 

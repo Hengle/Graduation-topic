@@ -9,9 +9,7 @@ public class QTE_angle_tough : MonoBehaviour
 
     //public float angle;
 
-    public float limit_angle = 45;
-
-    public GameObject roulette;
+    public GameObject ball;
 
     // Use this for initialization
     void Start()
@@ -27,6 +25,55 @@ public class QTE_angle_tough : MonoBehaviour
 
     public void QTE_on(float angle_qte)
     {
+        if ((angle_qte < 22.5f) && (angle_qte > -22.5f))
+        {
+            GameObject ball_game = GameObject.Instantiate(ball, this.transform.position, Quaternion.identity);
+            ball_game.transform.parent = this.transform;
+            ball_game.GetComponent<ball>().vec3 = new Vector3(1, 0, 0);
+        }
+        else if ((angle_qte > 22.5f) && (angle_qte < 67.5f))
+        {
+            GameObject ball_game = GameObject.Instantiate(ball, this.transform.position, Quaternion.identity);
+            ball_game.transform.parent = this.transform;
+            ball_game.GetComponent<ball>().vec3 = new Vector3(1, 1, 0);
+        }
+        else if ((angle_qte > 67.5f) && (angle_qte < 112.5f))
+        {
+            GameObject ball_game = GameObject.Instantiate(ball, this.transform.position, Quaternion.identity);
+            ball_game.transform.parent = this.transform;
+            ball_game.GetComponent<ball>().vec3 = new Vector3(0, 1, 0);
+        }
+        else if ((angle_qte > 112.5f) && (angle_qte < 157.5f))
+        {
+            GameObject ball_game = GameObject.Instantiate(ball, this.transform.position, Quaternion.identity);
+            ball_game.transform.parent = this.transform;
+            ball_game.GetComponent<ball>().vec3 = new Vector3(-1, 1, 0);
+        }
+        else if (((angle_qte > 157.5) && (angle_qte < 180)) || ((angle_qte < -157.5) && (angle_qte > -180)))
+        {
+            GameObject ball_game = GameObject.Instantiate(ball, this.transform.position, Quaternion.identity);
+            ball_game.transform.parent = this.transform;
+            ball_game.GetComponent<ball>().vec3 = new Vector3(-1, 0, 0);
+        }
+        else if ((angle_qte > -157.5) && (angle_qte < -112.5f))
+        {
+            GameObject ball_game = GameObject.Instantiate(ball, this.transform.position, Quaternion.identity);
+            ball_game.transform.parent = this.transform;
+            ball_game.GetComponent<ball>().vec3 = new Vector3(-1, -1, 0);
+        }
+        else if ((angle_qte > -112.5f) && (angle_qte < -67.5f))
+        {
+            GameObject ball_game = GameObject.Instantiate(ball, this.transform.position, Quaternion.identity);
+            ball_game.transform.parent = this.transform;
+            ball_game.GetComponent<ball>().vec3 = new Vector3(0, -1, 0);
+        }
+        else if ((angle_qte > -67.5f) && (angle_qte < -22.5f))
+        {
+            GameObject ball_game = GameObject.Instantiate(ball, this.transform.position, Quaternion.identity);
+            ball_game.transform.parent = this.transform;
+            ball_game.GetComponent<ball>().vec3 = new Vector3(1, -1, 0);
+        }
+
 
     }
 
