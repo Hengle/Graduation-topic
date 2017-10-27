@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4F9D6621-98F9-2119-3F5D-6CEF9AE2AF4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp.dll</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>5.6.2f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_2;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_5_6_2;UNITY_5_6;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_RUNTIME_NAVMESH_BUILDING;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;ENABLE_VIDEO;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_HAS_GOOGLEVR</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>C:/Program Files/Unity5.6.2/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>C:/Program Files/Unity5.6.2/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>C:/Program Files/Unity5.6.2/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>C:/Program Files/Unity5.6.2/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>C:/Program Files/Unity5.6.2/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/Program Files/Unity5.6.2/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>C:/Program Files/Unity5.6.2/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>C:/Program Files/Unity5.6.2/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:/Program Files/Unity5.6.2/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\AI\AI_look.cs" />
+    <Compile Include="Assets\AI\AI_look_tree.cs" />
+    <Compile Include="Assets\AI\AI_manger_2.cs" />
+    <Compile Include="Assets\AI\AI_move_tree.cs" />
+    <Compile Include="Assets\AI\AI_test1\AI_test.cs" />
+    <Compile Include="Assets\AI\AI_test2\AI_manger.cs" />
+    <Compile Include="Assets\AI\animator_event_script.cs" />
+    <Compile Include="Assets\AI\lerp_test.cs" />
+    <Compile Include="Assets\AI\nav_map_manger.cs" />
+    <Compile Include="Assets\AI\ray.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\Bullet.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\ETPlayer.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\ManualControl.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyJoystick\Example-thirdPerson_DirectEventMode\JoystickEvent.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyJoystick\Example_FirstPerson_DirectMode\GUIFirstDirect.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyJoystick\ExitButton.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-2D\Monster.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-FreeCam\FreeCam.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-FreeCam\GuiCam.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-ManipulationImage\GuiPhoto.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-ManipulationImage\Photo.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-MultiLayer\GuiLayer.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-MultiLayer\TouchLayer.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-Multiplefingers\GuiMultiFinger.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-Multiplefingers\ObjectTouch.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-Multiplefingers\ScreenTouch.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-Multiplefingers\SlowRotate.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-OneFinger\DoubleTap.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-OneFinger\Drag.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-OneFinger\GuiOneFinger.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-OneFinger\LongTap.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-OneFinger\Swipe.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-OneFinger\Tap.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-OneFinger\TouchStart.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-StartMenu\GuiStartMenu.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-TwoFinger\GuiTwoFinger.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-TwoFinger\Pinch.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-TwoFinger\Twist.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-TwoFinger\TwoDoubleTap.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-TwoFinger\TwoDrag.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-TwoFinger\TwoLongTap.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-TwoFinger\TwoSwipe.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-TwoFinger\TwoTap.cs" />
+    <Compile Include="Assets\EasyTouch\Example\C# Example\Examples for EasyTouch\Example-TwoFinger\TwoTouchStart.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\ECamera.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\EasyButton.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\EasyJoystick.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\EasyTouch.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\EasyTouchInput.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\Finger.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\Gesture.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\MonoSingleton.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\MovingJoystick.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\VirtualScreen.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\_C#-Event-Template\C_EasyButtonTemplate.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\_C#-Event-Template\C_EasyJoystickTemplate.cs" />
+    <Compile Include="Assets\EasyTouch\Plugins\_C#-Event-Template\C_EasyTouchTemplate.cs" />
+    <Compile Include="Assets\QTE\Script\Check.cs" />
+    <Compile Include="Assets\QTE\Script\PlayerRotation.cs" />
+    <Compile Include="Assets\QTE2\QTE_2.cs" />
+    <Compile Include="Assets\QTE2\QTE_angle_tough.cs" />
+    <Compile Include="Assets\QTE2\QTE_event.cs" />
+    <Compile Include="Assets\QTE2\QTE_rotation.cs" />
+    <Compile Include="Assets\QTE2\ball.cs" />
+    <Compile Include="Assets\QTE2\swipe_2.cs" />
+    <Compile Include="Assets\QTE2\text_test.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\AutoBlink.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\CameraController.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\FaceUpdate.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\IKCtrlRightHand.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\IdleChanger.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\RandomWind.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\SpringBone.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\SpringCollider.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\SpringManager.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\ThirdPersonCamera.cs" />
+    <Compile Include="Assets\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
+    <Compile Include="Assets\UnityChan\SplashScreen\Scripts\SplashScreen.cs" />
+    <Compile Include="Assets\VoxelMax\Source\DemoSceneScripts\BombShooter.cs" />
+    <Compile Include="Assets\VoxelMax\Source\DemoSceneScripts\BombTimer.cs" />
+    <Compile Include="Assets\VoxelMax\Source\DemoSceneScripts\Rocket.cs" />
+    <Compile Include="Assets\VoxelMax\Source\DemoSceneScripts\TankBehaviour.cs" />
+    <Compile Include="Assets\VoxelMax\Source\StaticValues.cs" />
+    <Compile Include="Assets\VoxelMax\Source\Voxel.cs" />
+    <Compile Include="Assets\VoxelMax\Source\VoxelAnimator.cs" />
+    <Compile Include="Assets\VoxelMax\Source\VoxelArea.cs" />
+    <Compile Include="Assets\VoxelMax\Source\VoxelBomb.cs" />
+    <Compile Include="Assets\VoxelMax\Source\VoxelContainer.cs" />
+    <Compile Include="Assets\VoxelMax\Source\VoxelExplosionParticle.cs" />
+    <Compile Include="Assets\VoxelMax\Source\VoxelIngameBuildTask.cs" />
+    <Compile Include="Assets\VoxelMax\Source\VoxelLayer.cs" />
+    <Compile Include="Assets\VoxelMax\Source\VoxelMeshOptimizer.cs" />
+    <Compile Include="Assets\VoxelMax\Source\VoxelPhysics.cs" />
+    <Compile Include="Assets\Z_team\old\AI_gameobject_all.cs" />
+    <Compile Include="Assets\Z_team\old\AI_gameobject_all_manger.cs" />
+    <Compile Include="Assets\Z_team\old\AI_look_event_manger.cs" />
+    <Compile Include="Assets\Z_team\old\AI_tree_change.cs" />
+    <Compile Include="Assets\Z_team\old\AI_tree_change_manger.cs" />
+    <Compile Include="Assets\Z_team\old\AI_tree_manger_event.cs" />
+    <Compile Include="Assets\Z_team\old\Bezier.cs" />
+    <Compile Include="Assets\Z_team\old\BezierUtils.cs" />
+    <Compile Include="Assets\Z_team\old\BezierUtils_test.cs" />
+    <Compile Include="Assets\Z_team\old\Parabola.cs" />
+    <Compile Include="Assets\Z_team\old\QTE_manger.cs" />
+    <Compile Include="Assets\Z_team\old\QTE_target_size.cs" />
+    <Compile Include="Assets\Z_team\old\Radar.cs" />
+    <Compile Include="Assets\Z_team\old\Ui_toggle_id.cs" />
+    <Compile Include="Assets\Z_team\old\animator_event_off.cs" />
+    <Compile Include="Assets\Z_team\old\arrow_trigger.cs" />
+    <Compile Include="Assets\Z_team\old\bezia_static.cs" />
+    <Compile Include="Assets\Z_team\old\boob.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_animator_event.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_data.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_exit_event.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_jump.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_jump_event.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_move.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_move_event.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_move_manger.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_wait.cs" />
+    <Compile Include="Assets\Z_team\old\enemy_wait_event.cs" />
+    <Compile Include="Assets\Z_team\old\event_name.cs" />
+    <Compile Include="Assets\Z_team\old\finger.cs" />
+    <Compile Include="Assets\Z_team\old\hand_tough_manger.cs" />
+    <Compile Include="Assets\Z_team\old\look_enemy.cs" />
+    <Compile Include="Assets\Z_team\old\music_boob.cs" />
+    <Compile Include="Assets\Z_team\old\newDus.cs" />
+    <Compile Include="Assets\Z_team\old\press_look_boob.cs" />
+    <Compile Include="Assets\Z_team\old\prop_manger.cs" />
+    <Compile Include="Assets\Z_team\old\prop_rule_manger.cs" />
+    <Compile Include="Assets\Z_team\old\target_trigger.cs" />
+    <Compile Include="Assets\Z_team\old\tr_point_test.cs" />
+    <Compile Include="Assets\Z_team\old\trap.cs" />
+    <Compile Include="Assets\Z_team\old\ui_manger.cs" />
+    <Compile Include="Assets\Z_team\old\unity_event_test.cs" />
+    <Compile Include="Assets\draw_attack\DrawTool.cs" />
+    <Compile Include="Assets\draw_attack\TestDraw.cs" />
+    <Compile Include="Assets\draw_attack\test_daw.cs" />
+    <Compile Include="Assets\tough\button_prop.cs" />
+    <Compile Include="Assets\tough\camera_z_ray.cs" />
+    <Compile Include="Assets\tough\hand_all.cs" />
+    <Compile Include="Assets\tough\hand_tough.cs" />
+    <Compile Include="Assets\tough\prop_delay.cs" />
+    <Compile Include="Assets\tough\prop_id.cs" />
+    <Compile Include="Assets\tough\prop_rule.cs" />
+    <Compile Include="Assets\tough\prop_rule_2.cs" />
+    <Compile Include="Assets\tough\prop_vec3_manger.cs" />
+    <Compile Include="Assets\tough\test_Z_2.cs" />
+    <Compile Include="Assets\tough\test_prop.cs" />
+    <Compile Include="Assets\tough\toggle_prop.cs" />
+    <Compile Include="Assets\tough\z_range_draw.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\EasyTouch\Readme_first.txt" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eyelash_blend.shader" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku_ds.shader" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada.shader" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hada_blend.shader" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair.shader" />
+    <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_hair_ds.shader" />
+    <None Include="Assets\UnityChan\Stage\Shader\AlphaMask.shader" />
+    <None Include="Assets\UnityChan\Voice\unity-chan_voice_list.txt" />
+    <None Include="Assets\VoxelMax\ColorPalettes\Basic Palette.txt" />
+    <None Include="Assets\VoxelMax\ColorPalettes\Commondore.txt" />
+    <None Include="Assets\VoxelMax\ColorPalettes\Flora.txt" />
+    <None Include="Assets\VoxelMax\ReadMe.txt" />
+    <None Include="Assets\draw_attack\content.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
