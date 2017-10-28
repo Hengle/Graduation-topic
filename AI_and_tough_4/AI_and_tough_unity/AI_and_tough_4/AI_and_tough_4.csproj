@@ -216,6 +216,12 @@
     <Compile Include="Assets\draw_attack\DrawTool.cs" />
     <Compile Include="Assets\draw_attack\TestDraw.cs" />
     <Compile Include="Assets\draw_attack\test_daw.cs" />
+    <Compile Include="Assets\enemy_ai_game_all.cs" />
+    <Compile Include="Assets\enemy_ai_manger.cs" />
+    <Compile Include="Assets\enemy_ai_move.cs" />
+    <Compile Include="Assets\enemy_ai_run.cs" />
+    <Compile Include="Assets\enemy_ai_wait.cs" />
+    <Compile Include="Assets\enemy_ai_walk.cs" />
     <Compile Include="Assets\tough\button_prop.cs" />
     <Compile Include="Assets\tough\camera_z_ray.cs" />
     <Compile Include="Assets\tough\hand_all.cs" />
