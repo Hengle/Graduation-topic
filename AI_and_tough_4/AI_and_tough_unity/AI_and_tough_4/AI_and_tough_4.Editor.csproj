@@ -135,6 +135,7 @@
     <Compile Include="Assets\EasyTouch\Plugins\Editor\GUIEasyTouchMenu.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\Editor\GUIEasytouchCallBack.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\Editor\HTGUILayout.cs" />
+    <Compile Include="Assets\Editor\CreateCone.cs" />
     <Compile Include="Assets\UnityChan\Editor\CreateLocatorHere.cs" />
     <Compile Include="Assets\VoxelMax\Source\Editor\About.cs" />
     <Compile Include="Assets\VoxelMax\Source\Editor\ColorPalettes.cs" />

@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/QTE2/QTE3.unity
+- path: Assets/Particle.unity
   isLoaded: 1
   isActive: 1
