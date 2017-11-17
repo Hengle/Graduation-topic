@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Particle.unity
+- path: Assets/Z_team/new/AI_and_tough 1.unity
   isLoaded: 1
   isActive: 1

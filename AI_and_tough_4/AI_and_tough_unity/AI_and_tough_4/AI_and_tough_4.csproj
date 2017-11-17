@@ -135,6 +135,7 @@
     <Compile Include="Assets\EasyTouch\Plugins\_C#-Event-Template\C_EasyButtonTemplate.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\_C#-Event-Template\C_EasyJoystickTemplate.cs" />
     <Compile Include="Assets\EasyTouch\Plugins\_C#-Event-Template\C_EasyTouchTemplate.cs" />
+    <Compile Include="Assets\Invasion.cs" />
     <Compile Include="Assets\QTE\Script\Check.cs" />
     <Compile Include="Assets\QTE\Script\PlayerRotation.cs" />
     <Compile Include="Assets\QTE2\QTE_2.cs" />
@@ -143,6 +144,7 @@
     <Compile Include="Assets\QTE2\QTE_lern.cs" />
     <Compile Include="Assets\QTE2\QTE_raotation_test.cs" />
     <Compile Include="Assets\QTE2\QTE_rotation.cs" />
+    <Compile Include="Assets\QTE2\QTE_target_z.cs" />
     <Compile Include="Assets\QTE2\ball.cs" />
     <Compile Include="Assets\QTE2\swipe_2.cs" />
     <Compile Include="Assets\QTE2\text_test.cs" />
