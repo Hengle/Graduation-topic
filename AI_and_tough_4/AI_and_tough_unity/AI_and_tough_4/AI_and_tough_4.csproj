@@ -186,6 +186,7 @@
     <Compile Include="Assets\Z_team\old\trap.cs" />
     <Compile Include="Assets\Z_team\old\ui_manger.cs" />
     <Compile Include="Assets\Z_team\old\unity_event_test.cs" />
+    <Compile Include="Assets\eye_mesh_test.cs" />
     <Compile Include="Assets\hand_tough_manger_2.cs" />
     <Compile Include="Assets\old\AI\AI_look.cs" />
     <Compile Include="Assets\old\AI\AI_look_tree.cs" />
