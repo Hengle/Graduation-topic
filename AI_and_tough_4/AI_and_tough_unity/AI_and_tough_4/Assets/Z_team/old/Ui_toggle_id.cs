@@ -65,7 +65,7 @@ public class Ui_toggle_id : MonoBehaviour {
 
         prop_manger.prop_gameobject_send(prop_gameobject, this.gameObject);
 
-        this.transform.GetChild(0).GetComponent<Image>().color = new Color32(125, 125, 125, 255);
+        //this.transform.GetChild(0).GetComponent<Image>().color = new Color32(125, 125, 125, 255);
 
     }
 
