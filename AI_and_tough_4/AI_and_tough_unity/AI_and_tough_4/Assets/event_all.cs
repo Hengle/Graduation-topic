@@ -31,6 +31,9 @@ public class event_all : MonoBehaviour {
             case "music_boob":
                 music_boob(id_gameObject);
                 break;
+            case "Invasion":
+                print("Invasion" );
+                break;
             default:
                 print("Error : Event none"+ "   " + id);
                 break;

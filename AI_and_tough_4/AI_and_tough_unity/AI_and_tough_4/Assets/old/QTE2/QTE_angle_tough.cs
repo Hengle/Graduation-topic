@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QTE_angle_tough : MonoBehaviour
 {
-
+    /*
     //public swipe_2 _swipe_2;
 
     //public float angle;
@@ -83,5 +83,10 @@ public class QTE_angle_tough : MonoBehaviour
         ball_game.transform.parent = this.transform;
         ball_game.GetComponent<ball>().vec3 = tough_vec;
     }
+    */
+
+    public enum bullet {yellow , puppole,green,blue };
+
+    public bullet bullet_num;
 
 }

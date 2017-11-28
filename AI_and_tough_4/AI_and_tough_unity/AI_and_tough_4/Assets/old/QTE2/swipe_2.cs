@@ -88,7 +88,7 @@ public class swipe_2 : MonoBehaviour {
             tough_vec2 = gesture.swipeVector.normalized;
             angle = angles;
 
-            _QTE_angle_tough.QTE_on(tough_vec2);
+            //_QTE_angle_tough.QTE_on(tough_vec2);
         }
 
     }
