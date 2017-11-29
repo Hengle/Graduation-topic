@@ -189,6 +189,7 @@
     <Compile Include="Assets\Z_team\old\ui_manger.cs" />
     <Compile Include="Assets\Z_team\old\unity_event_test.cs" />
     <Compile Include="Assets\boob_test.cs" />
+    <Compile Include="Assets\bullet_fly.cs" />
     <Compile Include="Assets\event_all.cs" />
     <Compile Include="Assets\event_attributes.cs" />
     <Compile Include="Assets\event_trigger_script.cs" />

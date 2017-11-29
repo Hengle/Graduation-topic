@@ -89,6 +89,8 @@ public class swipe_2 : MonoBehaviour {
             angle = angles;
 
             //_QTE_angle_tough.QTE_on(tough_vec2);
+
+            _QTE_angle_tough.qte_bullet_on(tough_vec2, angle);
         }
 
     }

@@ -85,8 +85,44 @@ public class QTE_angle_tough : MonoBehaviour
     }
     */
 
-    public enum bullet {yellow , puppole,green,blue };
+    //public enum bullet {yellow , puppole,green,blue };
 
-    public bullet bullet_num;
+    //public bullet bullet_num;
+
+    public GameObject[] bullet_array;
+
+    public int bullet_num;
+
+    public void bullet_toggle(int id)
+    {
+        if(id == 1)
+        {
+            //bullet_num = bullet.yellow;
+            bullet_num = 0;
+        }
+        else if (id == 2)
+        {
+            //bullet_num = bullet.puppole;
+            bullet_num = 1;
+        }
+        else if (id == 3)
+        {
+            //bullet_num = bullet.green;
+            bullet_num = 2;
+        }
+        else if (id == 4)
+        {
+            //bullet_num = bullet.blue;
+            bullet_num = 3;
+        }
+    }
+
+    public void qte_bullet_on(Vector2 tough, float angle)
+    {
+       GameObject bullet_ins = GameObject.Instantiate(bullet_array[bullet_num], this.transform.position, Quaternion.identity);
+        bullet_ins.transform.Rotate(0, 0, angle);
+        bullet_ins.transform.parent = this.transform;
+        bullet_ins.GetComponent<bullet_fly>().angle_ins(tough);
+    }
 
 }
