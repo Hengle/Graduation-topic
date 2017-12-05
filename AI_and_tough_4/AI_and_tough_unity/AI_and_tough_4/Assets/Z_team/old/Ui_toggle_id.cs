@@ -7,7 +7,7 @@ public class Ui_toggle_id : MonoBehaviour {
 
     [Header("表示UI中物件的控制腳本")]
 
-    public hand_tough_manger hand_tough_manger;
+    public hand_tough_manger_2 hand_tough_manger;
 
     public prop_manger prop_manger;
 
@@ -17,7 +17,7 @@ public class Ui_toggle_id : MonoBehaviour {
 
     private void Awake()
     {
-        hand_tough_manger = (hand_tough_manger)FindObjectOfType(typeof(hand_tough_manger));
+        hand_tough_manger = (hand_tough_manger_2)FindObjectOfType(typeof(hand_tough_manger_2));
         prop_manger = (prop_manger)FindObjectOfType(typeof(prop_manger));
 
         if (prop_gameobject == null)

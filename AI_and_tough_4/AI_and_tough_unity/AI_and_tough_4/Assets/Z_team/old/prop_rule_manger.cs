@@ -6,7 +6,7 @@ public class prop_rule_manger : MonoBehaviour {
 
     [Header("道具實行方案")]
 
-    public hand_tough_manger hand_tough_manger_;
+    public hand_tough_manger_2 hand_tough_manger_;
 
     public prop_manger prop_manger_;
 
@@ -34,8 +34,8 @@ public class prop_rule_manger : MonoBehaviour {
     [Header("長按盲區")]
     [Range(0f, 10f)]
     public float prop_press_dead = 3f;
-    [Header("陷阱腳本")]
-    public trap _tarp;
+    //[Header("陷阱腳本")]
+    //public trap _tarp;
 
     //成功更換得材質球
     [Header("長按或延遲 成功更換得材質球" + "  " + "原本為完全透明材質球")]
@@ -44,7 +44,7 @@ public class prop_rule_manger : MonoBehaviour {
 
     private void Awake()
     {
-        hand_tough_manger_ = (hand_tough_manger)FindObjectOfType(typeof(hand_tough_manger));
+        hand_tough_manger_ = (hand_tough_manger_2)FindObjectOfType(typeof(hand_tough_manger_2));
         prop_manger_ = (prop_manger)FindObjectOfType(typeof(prop_manger));
         prop_id = (prop_id)FindObjectOfType(typeof(prop_id));
 
@@ -106,7 +106,7 @@ public class prop_rule_manger : MonoBehaviour {
 
                 //prop_vec3_manger.prop_end();
                 prop_manger_.prop_end();
-                _tarp.enabled = true;
+                //_tarp.enabled = true;
                 Destroy(this.transform.GetChild(0).gameObject);
                 Destroy(this);
 
