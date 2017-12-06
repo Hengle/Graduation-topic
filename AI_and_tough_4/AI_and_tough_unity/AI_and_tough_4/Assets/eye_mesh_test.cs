@@ -25,6 +25,8 @@ public class eye_mesh_test : MonoBehaviour
         {
             print(other.gameObject + "  " + Time.time);
         }
+
+        print(other.gameObject + "  " + Time.time);
     }
 
     private void OnTriggerStay(Collider other)
@@ -33,6 +35,14 @@ public class eye_mesh_test : MonoBehaviour
         {
             print(other.gameObject + "  " + Time.time);
         }
+
+        //if (collision.collider.gameObject.layer == LayerMask.NameToLayer("LAYER_NAME"))
+        //{
+        //    Debug.Log("Touched a rail");
+        //}
+
+        print(other.gameObject + "  " + Time.time);
+
     }
 
 }

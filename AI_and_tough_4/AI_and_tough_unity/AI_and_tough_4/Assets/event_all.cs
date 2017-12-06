@@ -34,6 +34,10 @@ public class event_all : MonoBehaviour {
             case "Invasion":
                 print("Invasion" );
                 break;
+            case "trap":
+                //print("Invasion");
+                trap();
+                break;
             default:
                 print("Error : Event none"+ "   " + id);
                 break;
@@ -49,6 +53,11 @@ public class event_all : MonoBehaviour {
 
         _enemy_ai_move.target = id_gameObject.transform.position;
 
+    }
+
+    void trap()
+    {
+        _enemy_ai_wait.time = 6;
     }
 
 }

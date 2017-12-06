@@ -38,9 +38,11 @@ public class prop_rule_manger : MonoBehaviour {
     //public trap _tarp;
 
     //成功更換得材質球
-    [Header("長按或延遲 成功更換得材質球" + "  " + "原本為完全透明材質球")]
+    //[Header("長按或延遲 成功更換得材質球" + "  " + "原本為完全透明材質球")]
     //[Header("原本為完全透明材質球")]
-    public Material change_material;
+    //public Material change_material;
+    [Header("材質球和刪除的規則，長按延遲")]
+    public prop_material_des _prop_material_des;
 
     private void Awake()
     {
@@ -51,6 +53,8 @@ public class prop_rule_manger : MonoBehaviour {
         prop_mode_time = prop_id.prop_time;
 
         prop_mode_vec3 = this.gameObject.transform.position;
+
+        _prop_material_des = this.GetComponent<prop_material_des>();
 
     }
 
@@ -102,12 +106,15 @@ public class prop_rule_manger : MonoBehaviour {
             {
                 //GameObject.Instantiate(prop_gameobject, prop_mode_vec3, Quaternion.identity);
                 //prop_end();
-                this.gameObject.GetComponent<Renderer>().material = change_material;
+                //this.gameObject.GetComponent<Renderer>().material = change_material;
 
                 //prop_vec3_manger.prop_end();
                 prop_manger_.prop_end();
                 //_tarp.enabled = true;
-                Destroy(this.transform.GetChild(0).gameObject);
+                //Destroy(this.transform.GetChild(0).gameObject);
+
+                _prop_material_des.prop_ok();
+
                 Destroy(this);
 
             }
@@ -143,8 +150,9 @@ public class prop_rule_manger : MonoBehaviour {
 
         if (prop_mode_time <= 0)
         {
-            this.gameObject.GetComponent<Renderer>().material = change_material;
+            //this.gameObject.GetComponent<Renderer>().material = change_material;
             //prop_vec3_manger.prop_end();
+            _prop_material_des.prop_ok();
             prop_manger_.prop_end();
             Destroy(this);
         }
@@ -153,7 +161,8 @@ public class prop_rule_manger : MonoBehaviour {
     void prop_lose()
     {
         prop_manger_.is_first_prop_ok = false;
-        Destroy(this.transform.parent.gameObject);
+        //Destroy(this.transform.parent.gameObject);
+        _prop_material_des.prop_no();
     }
 
 }
