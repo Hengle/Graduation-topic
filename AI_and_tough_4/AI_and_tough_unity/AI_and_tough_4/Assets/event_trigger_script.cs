@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class event_trigger_script : MonoBehaviour {
 
+    [Header("執行")]
+    public bool start;
+    [Header("只執行一次")]
+    public bool first;
+    [Header("執行幾秒 first 在 false 下才行")]
+    public float time;
+    [Header("要偵測的物件Tag名字")]
+    public string tag_name;
+
     public LayerMask layer;
 
     public float range;
@@ -12,9 +21,14 @@ public class event_trigger_script : MonoBehaviour {
 
     public string ID;
 
-    public bool first;
 
-    
+    public event_all _event_all;
+
+    private void Awake()
+    {
+        _event_all = (event_all)FindObjectOfType(typeof(event_all));
+    }
+
 
     // Use this for initialization
     void Start () {
@@ -24,9 +38,12 @@ public class event_trigger_script : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        testdraw();
-        music_boob_on();
-        //Destroy(this.gameObject);
+        if(start == true)
+        {
+            testdraw();
+            music_boob_on();
+            //Destroy(this.gameObject);
+        }
     }
 
     void music_boob_on()
@@ -43,12 +60,28 @@ public class event_trigger_script : MonoBehaviour {
             //serch_colloder.transform.GetComponentInChildren<enemy_move_event>().target = this.transform.position;
             //serch_colloder.transform.GetComponentInChildren<enemy_move_event>()
 
-            serch_colloder.transform.GetComponentInChildren<event_all>().event_ID(ID,this.gameObject);
+            //serch_colloder.transform.GetComponentInChildren<event_all>().event_ID(ID,this.gameObject);
+
+            if (serch_colloder.gameObject.tag == tag_name)
+            {
+                _event_all.event_ID(ID, this.gameObject);
+            }
+
         }
 
         if(first == true)
         {
             Destroy(this.gameObject);
+        }
+        else
+        {
+            time -= Time.deltaTime;
+
+            if(time <=0)
+            {
+                Destroy(this.gameObject);
+            }
+
         }
 
     }

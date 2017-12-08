@@ -13,33 +13,53 @@ public class event_all : MonoBehaviour {
 
     public NavMeshAgent enemy_nav;
 
+    public GameObject eye;
+
+    [Header("陷阱時間")]
+    public float trap_time;
+
+    [Header("延遲時間")]
+    public float flashlight_time_last;
+
+    public float flashlight_time;
+
+    public bool flashlight_on;
 
     // Use this for initialization
-    void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
-    public void event_ID(string id,GameObject id_gameObject)
+    void Start()
     {
-        switch(id)
+        flashlight_time = flashlight_time_last;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(flashlight_on ==true)
+        {
+            flashlight();
+        }
+
+    }
+
+    public void event_ID(string id, GameObject id_gameObject)
+    {
+        switch (id)
         {
             case "music_boob":
                 music_boob(id_gameObject);
                 break;
             case "Invasion":
-                print("Invasion" );
+                print("Invasion");
                 break;
             case "trap":
                 //print("Invasion");
                 trap();
                 break;
+            case "Flashlight":
+                flashlight_on = true;
+                break;
             default:
-                print("Error : Event none"+ "   " + id);
+                print("Error : Event none" + "   " + id);
                 break;
         }
     }
@@ -57,7 +77,22 @@ public class event_all : MonoBehaviour {
 
     void trap()
     {
-        _enemy_ai_wait.time = 6;
+        _enemy_ai_wait.time = trap_time;
+    }
+
+    void flashlight()
+    {
+        if(flashlight_time > 0)
+        {
+            eye.transform.localScale = new Vector3(0.3f, 0.3f, 1);
+            flashlight_time -= Time.deltaTime;
+        }
+        else
+        {
+            eye.transform.localScale = Vector3.one;
+            flashlight_time = flashlight_time_last;
+            flashlight_on = false;
+        }
     }
 
 }

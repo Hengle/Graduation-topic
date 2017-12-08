@@ -6,7 +6,9 @@ using UnityEngine;
 public class eye_mesh_test : MonoBehaviour
 {
 
-    public LayerMask layer;
+    //public LayerMask layer;
+
+    public static string look = "look_tag";
 
     // Use this for initialization
     void Start()
@@ -19,29 +21,29 @@ public class eye_mesh_test : MonoBehaviour
     {
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.layer == Mathf.Log(layer, 2))
-        {
-            print(other.gameObject + "  " + Time.time);
-        }
+    //private void OnTriggerEnter(Collider other)
+    //{
+        //if (other.gameObject.layer == Mathf.Log(layer, 2))
+        //{
+        //    print(other.gameObject + "  " + Time.time);
+        //}
 
-        print(other.gameObject + "  " + Time.time);
-    }
+        //print(other.gameObject + "  " + Time.time);
+    //}
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.layer == Mathf.Log(layer,2))
-        {
-            print(other.gameObject + "  " + Time.time);
-        }
+        //if (other.gameObject.layer == Mathf.Log(layer,2))
+        //{
+        //    print(other.gameObject + "  " + Time.time);
+        //}
 
         //if (collision.collider.gameObject.layer == LayerMask.NameToLayer("LAYER_NAME"))
         //{
         //    Debug.Log("Touched a rail");
         //}
 
-        print(other.gameObject + "  " + Time.time);
+        //print(other.gameObject + "  " + Time.time);
 
     }
 
