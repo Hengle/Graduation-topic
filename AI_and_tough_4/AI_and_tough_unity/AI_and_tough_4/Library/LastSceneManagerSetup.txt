@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/team_game 2.unity
+- path: Assets/team_game.unity
   isLoaded: 1
   isActive: 1
