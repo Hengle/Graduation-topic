@@ -195,6 +195,7 @@
     <Compile Include="Assets\event_attributes.cs" />
     <Compile Include="Assets\event_prop_cool.cs" />
     <Compile Include="Assets\event_test_.cs" />
+    <Compile Include="Assets\event_text.cs" />
     <Compile Include="Assets\event_trigger_script.cs" />
     <Compile Include="Assets\eye_mesh_test.cs" />
     <Compile Include="Assets\hand_tough_manger_2.cs" />
