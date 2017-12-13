@@ -15,9 +15,13 @@ public class event_all : MonoBehaviour {
 
     public GameObject eye;
 
+    [Header("陷阱-----------------------------------")]
     [Header("陷阱時間")]
     public float trap_time;
 
+    public bool trap_on;
+
+    [Header("閃光彈---------------------------------")]
     [Header("延遲時間")]
     public float flashlight_time_last;
 
@@ -39,6 +43,11 @@ public class event_all : MonoBehaviour {
             flashlight();
         }
 
+        if (trap_on == true)
+        {
+            trap();
+        }
+
     }
 
     public void event_ID(string id, GameObject id_gameObject)
@@ -53,10 +62,17 @@ public class event_all : MonoBehaviour {
                 break;
             case "trap":
                 //print("Invasion");
-                trap();
+                //trap();
+                trap_on = true;
                 break;
             case "Flashlight":
                 flashlight_on = true;
+                break;
+            case "music":
+                music_boob(id_gameObject);
+                break;
+            case "look_prop":
+                print("look_prop");
                 break;
             default:
                 print("Error : Event none" + "   " + id);

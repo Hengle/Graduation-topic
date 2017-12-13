@@ -44,7 +44,7 @@ public class prop_rule_manger : MonoBehaviour {
     [Header("材質球和刪除的規則，長按延遲")]
     public prop_material_des _prop_material_des;
     [Header("事件執行")]
-    public event_trigger_script _event_Trigger_Script;
+    public event_trigger_script[] _event_Trigger_Script;
 
     private void Awake()
     {
@@ -58,7 +58,7 @@ public class prop_rule_manger : MonoBehaviour {
 
         _prop_material_des = this.GetComponent<prop_material_des>();
 
-        _event_Trigger_Script = this.GetComponent<event_trigger_script>();
+        //_event_Trigger_Script = this.GetComponent<event_trigger_script>();
 
     }
 
@@ -118,7 +118,7 @@ public class prop_rule_manger : MonoBehaviour {
                 //Destroy(this.transform.GetChild(0).gameObject);
 
                 _prop_material_des.prop_ok();
-                _event_Trigger_Script.start = true;
+                //_event_Trigger_Script.start = true;
                 Destroy(this);
 
             }
@@ -145,7 +145,7 @@ public class prop_rule_manger : MonoBehaviour {
     {
         //prop_vec3_manger.prop_end();
         prop_manger_.prop_end();
-        _event_Trigger_Script.start = true;
+        //_event_Trigger_Script.start = true;
         Destroy(this);
     }
 
@@ -159,7 +159,7 @@ public class prop_rule_manger : MonoBehaviour {
             //prop_vec3_manger.prop_end();
             _prop_material_des.prop_ok();
             prop_manger_.prop_end();
-            _event_Trigger_Script.start = true;
+            //_event_Trigger_Script.start = true;
             Destroy(this);
         }
     }
@@ -169,6 +169,14 @@ public class prop_rule_manger : MonoBehaviour {
         prop_manger_.is_first_prop_ok = false;
         //Destroy(this.transform.parent.gameObject);
         _prop_material_des.prop_no();
+    }
+
+    void event_trigger_start()
+    {
+        for(int i = 0; i<_event_Trigger_Script.Length;i++)
+        {
+            _event_Trigger_Script[i].start = true;
+        }
     }
 
 }

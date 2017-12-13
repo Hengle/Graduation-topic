@@ -193,6 +193,7 @@
     <Compile Include="Assets\cool_time.cs" />
     <Compile Include="Assets\event_all.cs" />
     <Compile Include="Assets\event_attributes.cs" />
+    <Compile Include="Assets\event_music.cs" />
     <Compile Include="Assets\event_prop_cool.cs" />
     <Compile Include="Assets\event_test_.cs" />
     <Compile Include="Assets\event_text.cs" />
