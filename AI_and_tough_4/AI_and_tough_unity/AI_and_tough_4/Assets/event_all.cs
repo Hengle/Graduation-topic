@@ -5,6 +5,20 @@ using UnityEngine.AI;
 
 public class event_all : MonoBehaviour {
 
+    [Header("飢餓值")]
+    public float hunger_value;
+    [Header("心情值")]
+    public float mood_value;
+    [Header("入侵度")]
+    public float Invasion_value;
+    [Header("飢餓值每秒減多少")]
+    public float hunger_value_remove_sec;
+    [Header("心情值一次減多少")]
+    public float mood_value_remove;
+    [Header("入侵度每秒加多少")]
+    public float Invasion_value_add;
+
+
     public enemy_ai_manger _enemy_ai_manger;
 
     public enemy_ai_wait _enemy_ai_wait;
@@ -15,19 +29,27 @@ public class event_all : MonoBehaviour {
 
     public GameObject eye;
 
-    [Header("陷阱-----------------------------------")]
-    [Header("陷阱時間")]
-    public float trap_time;
+    [Header("入侵-----------------------------------")]
+    [Header("(1)入侵啟動")]
+    public bool invasion_bool;
 
+    [Header("陷阱-----------------------------------")]
+    [Header("(1)陷阱時間")]
+    public float trap_time;
+    [Header("(2)陷阱啟動")]
     public bool trap_on;
+    [Header("(3)陷阱啟動拒絕(以免一直卡住)")]
+    public bool trap_event_off;
 
     [Header("閃光彈---------------------------------")]
-    [Header("延遲時間")]
+    [Header("(1)閃光彈時間(原本)")]
     public float flashlight_time_last;
-
+    [Header("(2)閃光彈時間")]
     public float flashlight_time;
-
+    [Header("(3)閃光彈啟動")]
     public bool flashlight_on;
+
+    
 
     // Use this for initialization
     void Start()
@@ -48,6 +70,11 @@ public class event_all : MonoBehaviour {
             trap();
         }
 
+        if (invasion_bool == true) 
+        {
+            Invasion_on();
+        }
+
     }
 
     public void event_ID(string id, GameObject id_gameObject)
@@ -58,7 +85,8 @@ public class event_all : MonoBehaviour {
                 music_boob(id_gameObject);
                 break;
             case "Invasion":
-                print("Invasion");
+                //print("Invasion");
+                invasion_bool = true;
                 break;
             case "trap":
                 //print("Invasion");
@@ -93,7 +121,11 @@ public class event_all : MonoBehaviour {
 
     void trap()
     {
-        _enemy_ai_wait.time = trap_time;
+        if ((trap_on == true) && (trap_event_off == false)) 
+        {
+            _enemy_ai_wait.time = trap_time;
+            trap_event_off = true;
+        }
     }
 
     void flashlight()
@@ -109,6 +141,12 @@ public class event_all : MonoBehaviour {
             flashlight_time = flashlight_time_last;
             flashlight_on = false;
         }
+    }
+
+    void Invasion_on()
+    {
+        Invasion_value += Invasion_value_add * Time.deltaTime;
+        print(Invasion_value + " " + Time.time);
     }
 
 }
