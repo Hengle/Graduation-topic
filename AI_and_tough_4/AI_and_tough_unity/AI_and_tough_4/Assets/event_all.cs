@@ -34,12 +34,18 @@ public class event_all : MonoBehaviour {
     public bool invasion_bool;
 
     [Header("陷阱-----------------------------------")]
-    [Header("(1)陷阱時間")]
-    public float trap_time;
-    [Header("(2)陷阱啟動")]
+    [Header("(1)陷阱啟動")]
     public bool trap_on;
-    [Header("(3)陷阱啟動拒絕(以免一直卡住)")]
-    public bool trap_event_off;
+    [Header("(2)陷阱時間")]
+    public float trap_time;
+    [Header("(3)陷阱時間(原本)")]
+    public float trap_time_last;
+    //[Header("(3)陷阱啟動拒絕(以免一直卡住)")]
+    //public bool trap_event_off;
+    [Header("(4)陷阱冷卻時間")]
+    public float trap_cool_time;
+    [Header("(5)陷阱冷卻時間(原本)")]
+    public float trap_cool_time_last;
 
     [Header("閃光彈---------------------------------")]
     [Header("(1)閃光彈時間(原本)")]
@@ -55,6 +61,8 @@ public class event_all : MonoBehaviour {
     void Start()
     {
         flashlight_time = flashlight_time_last;
+        trap_time = trap_time_last;
+        trap_cool_time = trap_cool_time_last + trap_time_last;
     }
 
     // Update is called once per frame
@@ -121,11 +129,64 @@ public class event_all : MonoBehaviour {
 
     void trap()
     {
-        if ((trap_on == true) && (trap_event_off == false)) 
+        //if (trap_on == true)
+        //{
+        //    _enemy_ai_wait.time = trap_time_event;
+        //    //trap_event_off = true;
+        //}
+
+
+
+        //if ((trap_time > 0) && (trap_event_off == false))
+        //{
+        //    //_enemy_ai_manger.enemy_static_now = enemy_ai_manger.enemy_static.exit;
+
+        //    enemy_nav.enabled = false;
+        //    trap_time -= Time.deltaTime;
+
+        //    //_enemy_ai_wait.time = trap_time_event;
+        //    //trap_event_off = true;
+
+        //}
+        //else if ((trap_time > 0) && (trap_event_off == true))
+        //{
+
+        //}
+        //else
+        //{
+        //    trap_time = trap_time_last;
+        //    //trap_event_off = false;
+        //    trap_on = false;
+        //}
+
+        //if (trap_time > 0)
+        //{
+            
+        //    trap_time -= Time.deltaTime;
+        //}
+        //else
+        //{
+           
+        //    trap_time = flashlight_time_last;
+        //    trap_on = false;
+        //}
+
+        if(trap_cool_time > 0)
         {
-            _enemy_ai_wait.time = trap_time;
-            trap_event_off = true;
+            if(trap_time > 0)
+            {
+                enemy_nav.enabled = false;
+                trap_time -= Time.deltaTime;
+            }
+            trap_cool_time -= Time.deltaTime;
         }
+        else
+        {
+            trap_time = trap_time_last;
+            trap_cool_time = trap_cool_time_last + trap_time_last;
+            trap_on = false;
+        }
+
     }
 
     void flashlight()
@@ -146,7 +207,11 @@ public class event_all : MonoBehaviour {
     void Invasion_on()
     {
         Invasion_value += Invasion_value_add * Time.deltaTime;
-        print(Invasion_value + " " + Time.time);
+        //print(Invasion_value + " " + Time.time);
+        if(Invasion_value >= 100)
+        {
+
+        }
     }
 
 }

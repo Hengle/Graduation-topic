@@ -264,6 +264,7 @@
     <Compile Include="Assets\prop_id.cs" />
     <Compile Include="Assets\prop_material_des.cs" />
     <Compile Include="Assets\prop_rule_manger.cs" />
+    <Compile Include="Assets\time_test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\EasyTouch\Readme_first.txt" />

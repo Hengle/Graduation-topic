@@ -59,10 +59,10 @@ public class event_trigger_script : MonoBehaviour {
     void music_boob_on()
     {
         enemy = Physics.OverlapSphere(this.transform.position, range, layer);
-        if (enemy == null)
-        {
-            return;
-        }
+        //if (enemy == null)
+        //{
+        //    return;
+        //}
 
         foreach (Collider serch_colloder in enemy)
         {
