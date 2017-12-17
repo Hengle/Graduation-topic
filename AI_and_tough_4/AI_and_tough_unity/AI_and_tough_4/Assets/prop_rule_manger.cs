@@ -119,6 +119,7 @@ public class prop_rule_manger : MonoBehaviour {
 
                 _prop_material_des.prop_ok();
                 //_event_Trigger_Script.start = true;
+                event_trigger_start();
                 Destroy(this);
 
             }
@@ -146,6 +147,7 @@ public class prop_rule_manger : MonoBehaviour {
         //prop_vec3_manger.prop_end();
         prop_manger_.prop_end();
         //_event_Trigger_Script.start = true;
+        event_trigger_start();
         Destroy(this);
     }
 
@@ -160,11 +162,12 @@ public class prop_rule_manger : MonoBehaviour {
             _prop_material_des.prop_ok();
             prop_manger_.prop_end();
             //_event_Trigger_Script.start = true;
+            event_trigger_start();
             Destroy(this);
         }
     }
 
-    void prop_lose()
+   public  void prop_lose()
     {
         prop_manger_.is_first_prop_ok = false;
         //Destroy(this.transform.parent.gameObject);

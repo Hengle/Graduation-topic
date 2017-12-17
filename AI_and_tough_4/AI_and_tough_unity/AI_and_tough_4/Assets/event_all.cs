@@ -29,6 +29,8 @@ public class event_all : MonoBehaviour {
 
     public GameObject eye;
 
+    public ui_vanves_manger _ui_canves_manger;
+
     [Header("入侵-----------------------------------")]
     [Header("(1)入侵啟動")]
     public bool invasion_bool;
@@ -78,10 +80,10 @@ public class event_all : MonoBehaviour {
             trap();
         }
 
-        if (invasion_bool == true) 
-        {
-            Invasion_on();
-        }
+        //if (invasion_bool == true) 
+        //{
+        //    Invasion_on();
+        //}
 
     }
 
@@ -94,7 +96,8 @@ public class event_all : MonoBehaviour {
                 break;
             case "Invasion":
                 //print("Invasion");
-                invasion_bool = true;
+                //invasion_bool = true;
+                Invasion_on();
                 break;
             case "trap":
                 //print("Invasion");
@@ -108,7 +111,8 @@ public class event_all : MonoBehaviour {
                 music_boob(id_gameObject);
                 break;
             case "look_prop":
-                print("look_prop");
+                //print("look_prop");
+                look_prop(id_gameObject);
                 break;
             default:
                 print("Error : Event none" + "   " + id);
@@ -210,8 +214,16 @@ public class event_all : MonoBehaviour {
         //print(Invasion_value + " " + Time.time);
         if(Invasion_value >= 100)
         {
-
+            Invasion_value = 0;
+            _ui_canves_manger.ui_to_qte_on();
+          
         }
+    }
+
+    void look_prop(GameObject gameObject_name)
+    {
+        Destroy(gameObject_name);
+        gameObject_name.GetComponent<prop_rule_manger>().prop_lose();
     }
 
 }

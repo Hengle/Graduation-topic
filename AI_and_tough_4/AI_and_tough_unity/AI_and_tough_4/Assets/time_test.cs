@@ -1,19 +1,30 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class time_test : MonoBehaviour {
 
-    
+    public CanvasGroup canvasGroup;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public float time;
+
+    public float time2;
+
+    // Use this for initialization
+    void Start () {
+        time2 = Time.realtimeSinceStartup - time;
+        time = Time.realtimeSinceStartup;
+    }
 
     private void Update()
     {
+        time2 = Time.realtimeSinceStartup - time;
+        time = Time.realtimeSinceStartup;
         print("Update");
+        print(canvasGroup.alpha + " " + Time.realtimeSinceStartup);
+        canvasGroup.alpha += 0.1f *time2;
+        
     }
 
     private void FixedUpdate()
@@ -24,6 +35,7 @@ public class time_test : MonoBehaviour {
     private void LateUpdate()
     {
         print("LateUpdate");
+       
     }
 
     void OnEnable()

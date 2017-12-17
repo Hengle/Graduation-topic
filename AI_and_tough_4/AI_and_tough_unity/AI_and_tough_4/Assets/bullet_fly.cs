@@ -9,10 +9,17 @@ public class bullet_fly : MonoBehaviour
 
     public float speed;
 
+    public value_test value_Test;
+
+    private void Awake()
+    {
+        value_Test = (value_test)FindObjectOfType(typeof(value_test));
+    }
+
     // Update is called once per frame
     void Update()
     {
-        this.transform.position += angle * speed * Time.deltaTime;
+        this.transform.position += angle * speed /** Time.deltaTime*/;
 
     }
 
@@ -23,6 +30,11 @@ public class bullet_fly : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "qte_target")
+        {
+            value_Test.value_on(this.gameObject.name.Substring(0,8));
+        }
+
         Destroy(this.gameObject);
     }
 

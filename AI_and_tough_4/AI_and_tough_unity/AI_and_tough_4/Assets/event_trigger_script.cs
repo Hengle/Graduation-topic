@@ -28,6 +28,8 @@ public class event_trigger_script : MonoBehaviour {
 
     public bool Destroy_Object_this_gameobject;
 
+    public bool Destroy_Object_this;
+
     private void Awake()
     {
         _event_all = (event_all)FindObjectOfType(typeof(event_all));
@@ -35,6 +37,11 @@ public class event_trigger_script : MonoBehaviour {
         if(Destroy_Object_this_gameobject == true)
         {
             Destroy_Object = this.gameObject;
+        }
+
+        if (Destroy_Object_this == true)
+        {
+            Destroy_Object = this;
         }
 
     }
