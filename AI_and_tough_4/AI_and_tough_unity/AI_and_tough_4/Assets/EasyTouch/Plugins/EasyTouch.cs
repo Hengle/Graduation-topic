@@ -2046,6 +2046,6 @@ public class EasyTouch : MonoBehaviour {
 	public static LayerMask GetPickableLayer(){
 		return EasyTouch.instance.pickableLayers;	
 	}
-	#endregion
-		
+    #endregion
+    public GameObject aaa;
 }

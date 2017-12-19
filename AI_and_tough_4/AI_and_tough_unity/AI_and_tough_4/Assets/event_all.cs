@@ -31,9 +31,9 @@ public class event_all : MonoBehaviour {
 
     public ui_vanves_manger _ui_canves_manger;
 
-    [Header("入侵-----------------------------------")]
-    [Header("(1)入侵啟動")]
-    public bool invasion_bool;
+    //[Header("入侵-----------------------------------")]
+    //[Header("(1)入侵啟動")]
+    //public bool invasion_bool;
 
     [Header("陷阱-----------------------------------")]
     [Header("(1)陷阱啟動")]

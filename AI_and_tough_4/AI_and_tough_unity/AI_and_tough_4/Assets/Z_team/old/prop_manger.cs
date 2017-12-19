@@ -75,7 +75,7 @@ public class prop_manger : MonoBehaviour
 
                 if ((is_first_prop_ok == false) && (dead_tough(dead_ui, Input.touches[0].position) == false))
                 {
-                    GameObject.Instantiate(prop_gameobject, camera_ray_point_vec3, Quaternion.identity);
+                    GameObject.Instantiate(prop_gameobject, camera_ray_point_vec3, Quaternion.identity,this.transform);
                     is_first_prop_ok = true;
                 }
                 else if (is_first_prop_ok == true)
