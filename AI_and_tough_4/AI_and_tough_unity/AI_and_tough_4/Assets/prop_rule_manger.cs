@@ -170,6 +170,7 @@ public class prop_rule_manger : MonoBehaviour {
    public  void prop_lose()
     {
         prop_manger_.is_first_prop_ok = false;
+        prop_manger_.prop_end();
         //Destroy(this.transform.parent.gameObject);
         _prop_material_des.prop_no();
     }

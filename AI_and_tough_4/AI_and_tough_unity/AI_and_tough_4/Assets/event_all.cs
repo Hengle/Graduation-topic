@@ -7,10 +7,20 @@ public class event_all : MonoBehaviour {
 
     [Header("飢餓值")]
     public float hunger_value;
+    [Header("飢餓值(滿)")]
+    public float hunger_value_last;
     [Header("心情值")]
     public float mood_value;
+    [Header("心情值(滿)")]
+    public float mood_value_last;
+    //[Header("心情值扣冷卻時間")]
+    //public float mood_value_remove_time;
+    //[Header("心情值扣冷卻時間(滿)")]
+    //public float mood_value_remove_time_last;
     [Header("入侵度")]
     public float Invasion_value;
+    [Header("入侵度(滿)")]
+    public float Invasion_value_last;
     [Header("飢餓值每秒減多少")]
     public float hunger_value_remove_sec;
     [Header("心情值一次減多少")]
@@ -60,11 +70,13 @@ public class event_all : MonoBehaviour {
     
 
     // Use this for initialization
-    void Start()
+    void Awake()
     {
         flashlight_time = flashlight_time_last;
         trap_time = trap_time_last;
         trap_cool_time = trap_cool_time_last + trap_time_last;
+        mood_value = mood_value_last;
+        hunger_value = hunger_value_last;
     }
 
     // Update is called once per frame
@@ -85,6 +97,8 @@ public class event_all : MonoBehaviour {
         //    Invasion_on();
         //}
 
+        hunger_value -= hunger_value_remove_sec * Time.deltaTime;
+        
     }
 
     public void event_ID(string id, GameObject id_gameObject)
@@ -212,7 +226,7 @@ public class event_all : MonoBehaviour {
     {
         Invasion_value += Invasion_value_add * Time.deltaTime;
         //print(Invasion_value + " " + Time.time);
-        if(Invasion_value >= 100)
+        if(Invasion_value >= Invasion_value_last)
         {
             Invasion_value = 0;
             _ui_canves_manger.ui_to_qte_on();
@@ -222,6 +236,7 @@ public class event_all : MonoBehaviour {
 
     void look_prop(GameObject gameObject_name)
     {
+        mood_value -= mood_value_remove;
         Destroy(gameObject_name);
         gameObject_name.GetComponent<prop_rule_manger>().prop_lose();
     }

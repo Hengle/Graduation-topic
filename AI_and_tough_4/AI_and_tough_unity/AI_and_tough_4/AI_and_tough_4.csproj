@@ -201,6 +201,9 @@
     <Compile Include="Assets\event_trigger_script.cs" />
     <Compile Include="Assets\eye_mesh_test.cs" />
     <Compile Include="Assets\hand_tough_manger_2.cs" />
+    <Compile Include="Assets\hunger_image.cs" />
+    <Compile Include="Assets\invasion_image.cs" />
+    <Compile Include="Assets\mood_image.cs" />
     <Compile Include="Assets\old\AI\AI_look.cs" />
     <Compile Include="Assets\old\AI\AI_look_tree.cs" />
     <Compile Include="Assets\old\AI\AI_manger_2.cs" />
