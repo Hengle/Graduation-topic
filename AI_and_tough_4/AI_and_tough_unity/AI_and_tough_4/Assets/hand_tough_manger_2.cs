@@ -87,6 +87,10 @@ public class hand_tough_manger_2 : MonoBehaviour {
     [Header("最低角度")]
     public float min_angle;
 
+    //UI死區
+    [Header("UI死區")]
+    public GameObject[] dead_ui;
+
     private void Awake()
     {
         move_point_time = move_point_time_max;
@@ -109,7 +113,16 @@ public class hand_tough_manger_2 : MonoBehaviour {
     {
         if (script_close == false)
         {
-            mobile_input();
+            if (Input.touchCount == 0)
+            {
+                //transparent_game.transform.position = new Vector3(999, 0, 0);
+                return;
+            }
+            else if (dead_tough(dead_ui, Input.touches[0].position) == false)
+            {
+                 mobile_input();
+            }
+         
         }
         //camera_z_ray();
 
@@ -406,4 +419,39 @@ public class hand_tough_manger_2 : MonoBehaviour {
     //        //cube.transform.position = hit.point;
     //    }
     //}
+
+    bool dead_tough(GameObject[] dead_game, Vector3 input_pos)
+    {
+        bool anser = false;
+
+        foreach (GameObject serch in dead_game)
+        {
+            GameObject point_1 = serch.transform.GetChild(0).gameObject;
+            GameObject point_2 = serch.transform.GetChild(1).gameObject;
+
+            if (((point_1.transform.position.x > input_pos.x) && (input_pos.x > point_2.transform.position.x)) &&
+               ((point_1.transform.position.y > input_pos.y) && (input_pos.y > point_2.transform.position.y)))
+            {
+                anser = true;
+            }
+            else if (((point_1.transform.position.x > input_pos.x) && (input_pos.x > point_2.transform.position.x)) &&
+               ((point_1.transform.position.y < input_pos.y) && (input_pos.y < point_2.transform.position.y)))
+            {
+                anser = true;
+            }
+            else if (((point_1.transform.position.x < input_pos.x) && (input_pos.x < point_2.transform.position.x)) &&
+                   ((point_1.transform.position.y > input_pos.y) && (input_pos.y > point_2.transform.position.y)))
+            {
+                anser = true;
+            }
+            else if (((point_1.transform.position.x < input_pos.x) && (input_pos.x < point_2.transform.position.x)) &&
+                    ((point_1.transform.position.y < input_pos.y) && (input_pos.y < point_2.transform.position.y)))
+            {
+                anser = true;
+            }
+
+        }
+
+        return anser;
+    }
 }

@@ -78,6 +78,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Assets\Scripts\LevelButtonScrollRect.cs" />
+    <Compile Include="Assets\Assets\Scripts\MyToggle.cs" />
+    <Compile Include="Assets\Assets\Scripts\RotateSelf.cs" />
+    <Compile Include="Assets\Assets\Scripts\SkillItem.cs" />
     <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\Bullet.cs" />
     <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\ETPlayer.cs" />
     <Compile Include="Assets\EasyTouch\Example\C# Example\Example for EasyButton\ManualControl.cs" />
@@ -291,6 +296,7 @@
     <None Include="Assets\old\UnityChan\Stage\Shader\AlphaMask.shader" />
     <None Include="Assets\old\UnityChan\Voice\unity-chan_voice_list.txt" />
     <None Include="Assets\old\draw_attack\content.txt" />
+    <None Include="Assets\程式.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
