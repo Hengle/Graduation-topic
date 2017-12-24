@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 459037f2083fec541acd0a659714c9e5
-timeCreated: 1513866196
+timeCreated: 1514100728
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -82,9 +82,9 @@ TextureImporter:
       name: Invasion_button2_0
       rect:
         serializedVersion: 2
-        x: 379
-        y: 393
-        width: 268
+        x: 378
+        y: 395
+        width: 269
         height: 234
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

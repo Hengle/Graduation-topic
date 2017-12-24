@@ -192,6 +192,7 @@
     <Compile Include="Assets\Z_team\old\trap.cs" />
     <Compile Include="Assets\Z_team\old\ui_manger.cs" />
     <Compile Include="Assets\Z_team\old\unity_event_test.cs" />
+    <Compile Include="Assets\animator_event.cs" />
     <Compile Include="Assets\boob_test.cs" />
     <Compile Include="Assets\bullet_fly.cs" />
     <Compile Include="Assets\cool_event.cs" />
@@ -208,6 +209,7 @@
     <Compile Include="Assets\hand_tough_manger_2.cs" />
     <Compile Include="Assets\hunger_image.cs" />
     <Compile Include="Assets\invasion_image.cs" />
+    <Compile Include="Assets\invasionlight_image.cs" />
     <Compile Include="Assets\mood_image.cs" />
     <Compile Include="Assets\old\AI\AI_look.cs" />
     <Compile Include="Assets\old\AI\AI_look_tree.cs" />

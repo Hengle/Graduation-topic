@@ -42,6 +42,8 @@ public class event_all : MonoBehaviour
 
     public ui_vanves_manger _ui_canves_manger;
 
+    public Animator _enemy_animator;
+
     //[Header("入侵-----------------------------------")]
     //[Header("(1)入侵啟動")]
     //public bool invasion_bool;
@@ -67,6 +69,8 @@ public class event_all : MonoBehaviour
     public float flashlight_time;
     [Header("(3)閃光彈啟動")]
     public bool flashlight_on;
+
+    public bool nav_false_bool;
 
 
 
@@ -100,6 +104,17 @@ public class event_all : MonoBehaviour
 
         hunger_value -= hunger_value_remove_sec * Time.deltaTime;
 
+        animator_check();
+
+        if (nav_false_bool == true)
+        {
+            enemy_nav.enabled = false;
+        }
+        else
+        {
+            enemy_nav.enabled = true;
+        }
+
     }
 
     public void event_ID(string id, GameObject id_gameObject)
@@ -108,7 +123,9 @@ public class event_all : MonoBehaviour
         {
             case "music_boob":
                 mood_value -= 10;
-                music_boob(id_gameObject);
+                //event_animator_music_boob();
+                StartCoroutine(event_animator_music_boob(id_gameObject.transform.position));
+                //music_boob(id_gameObject);
                 break;
             case "Invasion":
                 //print("Invasion");
@@ -124,14 +141,17 @@ public class event_all : MonoBehaviour
                 break;
             case "Flashlight":
                 mood_value -= 10;
-                flashlight_on = true;
+                StartCoroutine(event_animator_Flashlight());
+               //flashlight_on = true;
                 break;
             case "music":
-                music_boob(id_gameObject);
+                //music_boob(id_gameObject);
+                StartCoroutine(event_animator_music_boob(id_gameObject.transform.position));
                 break;
             case "look_prop":
                 //print("look_prop");
-                look_prop(id_gameObject);
+                StartCoroutine(event_animator_look_prop());
+               look_prop(id_gameObject);
                 break;
             default:
                 print("Error : Event none" + "   " + id);
@@ -147,6 +167,17 @@ public class event_all : MonoBehaviour
         //enemy_nav.SetDestination(id_gameObject.transform.position);
 
         _enemy_ai_move.target = id_gameObject.transform.position;
+
+    }
+
+    void music_boob(Vector3 id_gameObject)
+    {
+        //print("music_boob" + id_gameObject.name);
+
+        //_enemy_ai_manger.enemy_static_now = enemy_ai_manger.enemy_static.exit;
+        //enemy_nav.SetDestination(id_gameObject.transform.position);
+
+        _enemy_ai_move.target = id_gameObject;
 
     }
 
@@ -215,12 +246,15 @@ public class event_all : MonoBehaviour
         {
             enemy_nav.enabled = false;
             trap_time -= Time.deltaTime;
+            _enemy_animator.SetBool("event", true);
+            _enemy_animator.SetBool("gosh", true);
         }
         else
         {
             trap_time = trap_time_last;
             enemy_nav.enabled = true;
             trap_on = false;
+            _enemy_animator.SetBool("event", false);
         }
 
 
@@ -269,6 +303,108 @@ public class event_all : MonoBehaviour
         mood_value -= mood_value_remove;
         Destroy(gameObject_name);
         gameObject_name.GetComponent<prop_rule_manger>().prop_lose();
+    }
+
+    void animator_check()
+    {
+        if(_enemy_ai_move.enemy_move_static == enemy_ai_move.move_static.none)
+        {
+            _enemy_animator.SetBool("idel", true);
+            _enemy_animator.SetBool("walk", false);
+            _enemy_animator.SetBool("run", false);
+        }
+        else if (_enemy_ai_move.enemy_move_static == enemy_ai_move.move_static.walk)
+        {
+            _enemy_animator.SetBool("idel", false);
+            _enemy_animator.SetBool("walk", true);
+            _enemy_animator.SetBool("run", false);
+        }
+        else if (_enemy_ai_move.enemy_move_static == enemy_ai_move.move_static.run)
+        {
+            _enemy_animator.SetBool("idel", false);
+            _enemy_animator.SetBool("walk", false);
+            _enemy_animator.SetBool("run", true);
+        }
+    }
+
+    IEnumerator event_animator_music_boob(Vector3 id_gameObject)
+    {
+        nav_false_bool = true;
+        _enemy_animator.SetBool("event", true);
+        _enemy_animator.SetBool("heart_sound", true);
+
+        //AnimatorStateInfo info = _enemy_animator.GetCurrentAnimatorStateInfo(0);
+        //// 判断动画是否播放完成
+        ////if (info.nameHash == Animator.StringToHash("Base Layer.anim"))
+        ////{
+        ////    Debug.Log("This is Anim 1");
+        ////}
+        //if(info.fullPathHash == Animator.StringToHash("Base Layer.heart_sound"))
+        //{
+
+        //}
+        //if (info.normalizedTime >= 1.0f)
+        //{
+
+        //}
+
+        yield return new WaitForSeconds(2);
+
+        music_boob(id_gameObject);
+        nav_false_bool = false;
+    }
+
+    IEnumerator event_animator_Flashlight()
+    {
+        flashlight_on = true;
+        nav_false_bool = true;
+        _enemy_animator.SetBool("event", true);
+        _enemy_animator.SetBool("blindess", true);
+
+        //AnimatorStateInfo info = _enemy_animator.GetCurrentAnimatorStateInfo(0);
+        //// 判断动画是否播放完成
+        ////if (info.nameHash == Animator.StringToHash("Base Layer.anim"))
+        ////{
+        ////    Debug.Log("This is Anim 1");
+        ////}
+        //if(info.fullPathHash == Animator.StringToHash("Base Layer.heart_sound"))
+        //{
+
+        //}
+        //if (info.normalizedTime >= 1.0f)
+        //{
+
+        //}
+
+        yield return new WaitForSeconds(2);
+        //flashlight();
+        nav_false_bool = false;
+    }
+
+    IEnumerator event_animator_look_prop()
+    {
+        nav_false_bool = true;
+        _enemy_animator.SetBool("event", true);
+        _enemy_animator.SetBool("demonstration", true);
+
+        //AnimatorStateInfo info = _enemy_animator.GetCurrentAnimatorStateInfo(0);
+        //// 判断动画是否播放完成
+        ////if (info.nameHash == Animator.StringToHash("Base Layer.anim"))
+        ////{
+        ////    Debug.Log("This is Anim 1");
+        ////}
+        //if(info.fullPathHash == Animator.StringToHash("Base Layer.heart_sound"))
+        //{
+
+        //}
+        //if (info.normalizedTime >= 1.0f)
+        //{
+
+        //}
+
+        yield return new WaitForSeconds(2);
+        //flashlight();
+        nav_false_bool = false;
     }
 
 }
