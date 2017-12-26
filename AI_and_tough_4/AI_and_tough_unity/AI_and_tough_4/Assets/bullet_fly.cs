@@ -35,7 +35,7 @@ public class bullet_fly : MonoBehaviour
             value_Test.value_on(this.gameObject.name.Substring(0,8));
         }
 
-        Destroy(this.gameObject);
+        Destroy(this.transform.parent.gameObject);
     }
 
 }

@@ -70,9 +70,18 @@ public class event_all : MonoBehaviour
     [Header("(3)閃光彈啟動")]
     public bool flashlight_on;
 
+    [Header("停用nav---------------------------------")]
     public bool nav_false_bool;
 
-
+    [Header("音爆彈---------------------------------")]
+    [Header("(1)音爆彈時間(原本)")]
+    public float no_listen_last;
+    [Header("(2)音爆彈時間")]
+    public float no_listen_time;
+    [Header("(3)音爆彈啟動")]
+    public bool no_listen;
+    [Header("(4)音爆彈啟動")]
+    public bool no_listen_on;
 
     // Use this for initialization
     void Awake()
@@ -82,6 +91,7 @@ public class event_all : MonoBehaviour
         //trap_cool_time = trap_cool_time_last + trap_time_last;
         mood_value = mood_value_last;
         hunger_value = hunger_value_last;
+        no_listen_time = no_listen_last;
     }
 
     // Update is called once per frame
@@ -115,6 +125,11 @@ public class event_all : MonoBehaviour
             enemy_nav.enabled = true;
         }
 
+        if(no_listen_on == true)
+        {
+            no_listen_on_();
+        }
+
     }
 
     public void event_ID(string id, GameObject id_gameObject)
@@ -122,10 +137,13 @@ public class event_all : MonoBehaviour
         switch (id)
         {
             case "music_boob":
-                mood_value -= 10;
-                //event_animator_music_boob();
-                StartCoroutine(event_animator_music_boob(id_gameObject.transform.position));
-                //music_boob(id_gameObject);
+                if(no_listen == false)
+                {
+                    mood_value -= 10;
+                    //event_animator_music_boob();
+                    StartCoroutine(event_animator_music_boob(id_gameObject.transform.position));
+                    //music_boob(id_gameObject);
+                }
                 break;
             case "Invasion":
                 //print("Invasion");
@@ -145,13 +163,23 @@ public class event_all : MonoBehaviour
                //flashlight_on = true;
                 break;
             case "music":
-                //music_boob(id_gameObject);
-                StartCoroutine(event_animator_music_boob(id_gameObject.transform.position));
+                if (no_listen == false)
+                {
+                    //music_boob(id_gameObject);
+                    StartCoroutine(event_animator_music_boob(id_gameObject.transform.position));
+                }
                 break;
             case "look_prop":
                 //print("look_prop");
                 StartCoroutine(event_animator_look_prop());
                look_prop(id_gameObject);
+                break;
+            case "high_music_boon":
+                //print("look_prop");
+                // StartCoroutine(event_animator_look_prop());
+                //look_prop(id_gameObject);
+                //print("high_music_boon");
+                StartCoroutine(event_animator_high_music_boon());
                 break;
             default:
                 print("Error : Event none" + "   " + id);
@@ -405,6 +433,51 @@ public class event_all : MonoBehaviour
         yield return new WaitForSeconds(2);
         //flashlight();
         nav_false_bool = false;
+    }
+
+    IEnumerator event_animator_high_music_boon()
+    {
+        nav_false_bool = true;
+        _enemy_animator.SetBool("event", true);
+        _enemy_animator.SetBool("can_t_heart", true);
+
+        no_listen = true;
+
+        no_listen_on = true;
+
+        //AnimatorStateInfo info = _enemy_animator.GetCurrentAnimatorStateInfo(0);
+        //// 判断动画是否播放完成
+        ////if (info.nameHash == Animator.StringToHash("Base Layer.anim"))
+        ////{
+        ////    Debug.Log("This is Anim 1");
+        ////}
+        //if(info.fullPathHash == Animator.StringToHash("Base Layer.heart_sound"))
+        //{
+
+        //}
+        //if (info.normalizedTime >= 1.0f)
+        //{
+
+        //}
+
+        yield return new WaitForSeconds(3);
+        //flashlight();
+        nav_false_bool = false;
+    }
+
+    void no_listen_on_()
+    {
+        if (no_listen_time > 0)
+        {
+            no_listen_time -= Time.deltaTime;
+        }
+        else
+        {
+            no_listen_time = no_listen_last;
+            no_listen = false;
+            no_listen_on = false;
+        }
+
     }
 
 }

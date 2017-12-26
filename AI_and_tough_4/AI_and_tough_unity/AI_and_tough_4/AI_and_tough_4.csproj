@@ -273,6 +273,7 @@
     <Compile Include="Assets\old\tough\toggle_prop.cs" />
     <Compile Include="Assets\old\tough\z_range_draw.cs" />
     <Compile Include="Assets\prop_id.cs" />
+    <Compile Include="Assets\prop_ins_particle.cs" />
     <Compile Include="Assets\prop_material_des.cs" />
     <Compile Include="Assets\prop_rule_manger.cs" />
     <Compile Include="Assets\time_test.cs" />

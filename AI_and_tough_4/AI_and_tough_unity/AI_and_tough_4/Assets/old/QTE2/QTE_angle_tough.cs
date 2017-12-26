@@ -122,7 +122,7 @@ public class QTE_angle_tough : MonoBehaviour
        GameObject bullet_ins = GameObject.Instantiate(bullet_array[bullet_num], this.transform.position, Quaternion.identity);
         bullet_ins.transform.Rotate(0, 0, angle);
         bullet_ins.transform.parent = this.transform;
-        bullet_ins.GetComponent<bullet_fly>().angle_ins(tough);
+        bullet_ins.transform.GetChild(0).GetComponent<bullet_fly>().angle_ins(tough);
     }
 
 }
